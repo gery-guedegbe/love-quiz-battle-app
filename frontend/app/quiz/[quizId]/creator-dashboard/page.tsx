@@ -88,16 +88,16 @@ export default function CreatorDashboardPage() {
 
   if (loading)
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Clock className="w-6 md:w-8 h-6 md:h-8 text-primary animate-spin" />
-        <p className="text-gray-600 ml-2">{t("global.loading")}</p>
+      <div className="flex min-h-screen items-center justify-center">
+        <Clock className="text-primary h-6 w-6 animate-spin md:h-8 md:w-8" />
+        <p className="ml-2 text-gray-600">{t("global.loading")}</p>
       </div>
     );
 
   if (error)
     return (
-      <div className="min-h-screen flex items-center justify-center text-center p-6">
-        <p className="text-red-500 mb-4">{error}</p>
+      <div className="flex min-h-screen items-center justify-center p-6 text-center">
+        <p className="mb-4 text-red-500">{error}</p>
         <Button onClick={() => router.push("/")}>{t("global.goBack")}</Button>
       </div>
     );
@@ -106,11 +106,11 @@ export default function CreatorDashboardPage() {
   const shareUrl = `${window.location.origin}/play/${quiz?.id}`;
 
   return (
-    <div className="min-h-screen flex flex-col px-4 md:px-6 pt-16 md:pt-6 max-w-md mx-auto">
+    <div className="mx-auto flex min-h-screen max-w-md flex-col px-4 pt-16 md:px-6 md:pt-6">
       {/* Header */}
-      <div className="py-4 space-y-2">
-        <div className="flex items-center gap-1.5 md:gap-2 text-[#FF6B6B]">
-          <BarChart3 className="w-5 h-5" />
+      <div className="space-y-2 py-4">
+        <div className="flex items-center gap-1.5 text-[#FF6B6B] md:gap-2">
+          <BarChart3 className="h-5 w-5" />
           <h1 className="text-lg font-semibold">{t("dashboard.title")}</h1>
         </div>
 
@@ -125,7 +125,7 @@ export default function CreatorDashboardPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-3xl shadow-lg p-4 md:p-6 space-y-4"
+          className="space-y-4 rounded-3xl bg-white p-4 shadow-lg md:p-6"
         >
           <div className="flex items-start justify-between">
             <div>
@@ -133,30 +133,30 @@ export default function CreatorDashboardPage() {
                 {t("dashboard.createdBy")}
               </p>
 
-              <h2 className="text-2xl font-serif text-gray-900">
+              <h2 className="font-serif text-2xl text-gray-900">
                 {quiz?.creator_name}
               </h2>
 
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="mt-1 text-sm text-gray-600">
                 {t("dashboard.for")}{" "}
                 <span className="font-semibold">{quiz?.partner_name}</span>
               </p>
             </div>
 
-            <div className="px-4 py-2 bg-[#FF6B6B]/10 rounded-full">
-              <p className="text-2xl font-serif text-[#FF6B6B]">
+            <div className="rounded-full bg-[#FF6B6B]/10 px-4 py-2">
+              <p className="font-serif text-2xl text-[#FF6B6B]">
                 {quiz?.questions.length}
               </p>
 
-              <p className="text-xs text-gray-600 text-center">
+              <p className="text-center text-xs text-gray-600">
                 {t("dashboard.questions")}
               </p>
             </div>
           </div>
 
-          <div className="pt-4 border-t border-gray-100 grid grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-4 text-sm">
             <div>
-              <p className="text-gray-500 mb-1">
+              <p className="mb-1 text-gray-500">
                 {t("dashboard.multipleChoice")}
               </p>
 
@@ -166,7 +166,7 @@ export default function CreatorDashboardPage() {
             </div>
 
             <div>
-              <p className="text-gray-500 mb-1">{t("dashboard.yesNo")}</p>
+              <p className="mb-1 text-gray-500">{t("dashboard.yesNo")}</p>
 
               <p className="font-semibold text-gray-900">
                 {quiz?.questions.filter((q) => q.type === "yesno").length}
@@ -180,11 +180,11 @@ export default function CreatorDashboardPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-linear-to-br from-[#6BCF7F]/10 to-[#6BCF7F]/5 rounded-3xl shadow-lg p-4 md:p-6 border-2 border-[#6BCF7F]/20"
+            className="rounded-3xl border-2 border-[#6BCF7F]/20 bg-linear-to-br from-[#6BCF7F]/10 to-[#6BCF7F]/5 p-4 shadow-lg md:p-6"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-[#6BCF7F] rounded-full flex items-center justify-center">
-                <CheckCircle className="w-6 h-6 text-white" />
+            <div className="mb-4 flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#6BCF7F]">
+                <CheckCircle className="h-6 w-6 text-white" />
               </div>
 
               <div>
@@ -209,15 +209,15 @@ export default function CreatorDashboardPage() {
             </div>
 
             {/* Score Display */}
-            <div className="bg-white rounded-2xl p-4 md:p-6 space-y-4">
+            <div className="space-y-4 rounded-2xl bg-white p-4 md:p-6">
               <div className="text-center">
-                <p className="text-sm text-gray-600 mb-2">
+                <p className="mb-2 text-sm text-gray-600">
                   {t("dashboard.finalScore")}
                 </p>
 
                 <div className="flex items-center justify-center gap-3">
                   <div
-                    className="text-5xl font-serif"
+                    className="font-serif text-5xl"
                     style={{ color: getBadge(quiz!.partner_score).color }}
                   >
                     {quiz!.partner_score}%
@@ -228,20 +228,20 @@ export default function CreatorDashboardPage() {
                   </div>
                 </div>
                 <p
-                  className="text-lg font-semibold mt-2"
+                  className="mt-2 text-lg font-semibold"
                   style={{ color: getBadge(quiz!.partner_score).color }}
                 >
                   {getBadge(quiz!.partner_score).title}
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 pt-4 border-t border-gray-100">
+              <div className="grid grid-cols-3 gap-3 border-t border-gray-100 pt-4">
                 <div className="text-center">
-                  <div className="flex items-center justify-center gap-1 mb-1">
-                    <Award className="w-4 h-4 text-[#6BCF7F]" />
+                  <div className="mb-1 flex items-center justify-center gap-1">
+                    <Award className="h-4 w-4 text-[#6BCF7F]" />
                   </div>
 
-                  <p className="text-xl font-serif text-[#6BCF7F]">
+                  <p className="font-serif text-xl text-[#6BCF7F]">
                     {Math.round(
                       (quiz!.partner_score / 100) * quiz!.questions.length,
                     )}
@@ -253,11 +253,11 @@ export default function CreatorDashboardPage() {
                 </div>
 
                 <div className="text-center">
-                  <div className="flex items-center justify-center gap-1 mb-1">
-                    <TrendingUp className="w-4 h-4 text-gray-400" />
+                  <div className="mb-1 flex items-center justify-center gap-1">
+                    <TrendingUp className="h-4 w-4 text-gray-400" />
                   </div>
 
-                  <p className="text-xl font-serif text-gray-400">
+                  <p className="font-serif text-xl text-gray-400">
                     {quiz!.questions.length -
                       Math.round(
                         (quiz!.partner_score / 100) * quiz!.questions.length,
@@ -269,14 +269,12 @@ export default function CreatorDashboardPage() {
                   </p>
                 </div>
 
-                <ViewRecapCTA />
-
                 <div className="text-center">
-                  <div className="flex items-center justify-center gap-1 mb-1">
-                    <Heart className="w-4 h-4 text-gray-900" />
+                  <div className="mb-1 flex items-center justify-center gap-1">
+                    <Heart className="h-4 w-4 text-gray-900" />
                   </div>
 
-                  <p className="text-xl font-serif text-gray-900">
+                  <p className="font-serif text-xl text-gray-900">
                     {quiz!.questions.length}
                   </p>
 
@@ -291,15 +289,15 @@ export default function CreatorDashboardPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-linear-to-br from-[#FFD700]/10 to-[#FFD700]/5 rounded-3xl shadow-lg p-4 md:p-6 border-2 border-dashed border-[#FFD700]/30"
+            className="rounded-3xl border-2 border-dashed border-[#FFD700]/30 bg-linear-to-br from-[#FFD700]/10 to-[#FFD700]/5 p-4 shadow-lg md:p-6"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="mb-4 flex items-center gap-3">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                className="w-12 h-12 bg-[#FFD700] rounded-full flex items-center justify-center"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FFD700]"
               >
-                <Clock className="w-6 h-6 text-white" />
+                <Clock className="h-6 w-6 text-white" />
               </motion.div>
 
               <div>
@@ -316,24 +314,24 @@ export default function CreatorDashboardPage() {
             </div>
 
             {/* Share Link */}
-            <div className="bg-white rounded-2xl p-2 md:p-4">
-              <p className="text-xs text-gray-500 mb-2">
+            <div className="rounded-2xl bg-white p-2 md:p-4">
+              <p className="mb-2 text-xs text-gray-500">
                 {t("dashboard.shareableLink")}
               </p>
 
               <div className="flex gap-2">
-                <div className="flex-1 px-3 py-2 bg-gray-50 rounded-lg text-xs text-gray-600 truncate font-mono">
+                <div className="flex-1 truncate rounded-lg bg-gray-50 px-3 py-2 font-mono text-xs text-gray-600">
                   {shareUrl}
                 </div>
 
                 <button
                   onClick={handleCopyLink}
-                  className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center"
+                  className="flex items-center justify-center rounded-lg bg-gray-100 p-2 transition-colors hover:bg-gray-200"
                 >
                   {copied ? (
-                    <CheckCircle className="w-4 h-4 text-[#6BCF7F]" />
+                    <CheckCircle className="h-4 w-4 text-[#6BCF7F]" />
                   ) : (
-                    <Copy className="w-4 h-4 text-gray-600" />
+                    <Copy className="h-4 w-4 text-gray-600" />
                   )}
                 </button>
               </div>
@@ -348,18 +346,18 @@ export default function CreatorDashboardPage() {
           transition={{ delay: 0.2 }}
           className="grid grid-cols-2 gap-3"
         >
-          <div className="bg-white rounded-2xl shadow p-4">
-            <p className="text-sm text-gray-600 mb-1">
+          <div className="rounded-2xl bg-white p-4 shadow">
+            <p className="mb-1 text-sm text-gray-600">
               {t("dashboard.customQuestions")}
             </p>
 
-            <p className="text-2xl font-serif text-[#FF6B6B]">
+            <p className="font-serif text-2xl text-[#FF6B6B]">
               {quiz?.questions.filter((q) => q.is_custom).length}
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow p-4">
-            <p className="text-sm text-gray-600 mb-1">
+          <div className="rounded-2xl bg-white p-4 shadow">
+            <p className="mb-1 text-sm text-gray-600">
               {t("dashboard.created")}
             </p>
 
@@ -374,17 +372,19 @@ export default function CreatorDashboardPage() {
         </motion.div>
       </div>
 
+      {isCompleted && <ViewRecapCTA />}
+
       {/* Actions */}
-      <div className="space-y-3 pb-6">
+      <div className="space-y-3 pt-6 pb-6">
         {!isCompleted && (
           <Button onClick={handleCopyLink} variant="secondary" fullWidth>
-            <Share2 className="w-5 h-5" />
+            <Share2 className="h-5 w-5" />
             {t("dashboard.shareQuizLink")}
           </Button>
         )}
 
         <Button onClick={onCreateNew} fullWidth>
-          <Plus className="w-5 h-5" />
+          <Plus className="h-5 w-5" />
           {t("dashboard.createNewQuiz")}
         </Button>
       </div>

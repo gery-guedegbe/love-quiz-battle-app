@@ -67,19 +67,19 @@ const ViewRecapCTA = () => {
         onClick={handleViewWrapped}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full p-4 md:p-6 bg-linear-to-r from-primary to-primary-light rounded-3xl shadow-xl flex items-center justify-between group"
+        className="from-primary to-primary-light group flex w-full items-center justify-between rounded-3xl bg-linear-to-r p-4 shadow-xl md:p-6"
       >
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-            <SparklesIcon className="w-6 h-6 text-white" />
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+            <SparklesIcon className="h-6 w-6 text-white" />
           </div>
 
           <div className="text-left">
-            <p className="text-white font-semibold text-base md:text-lg">
+            <p className="text-base font-semibold text-white md:text-lg">
               {t("recap.cta.title")}
             </p>
 
-            <p className="text-white/80 text-sm">{t("recap.cta.subtitle")}</p>
+            <p className="text-sm text-white/80">{t("recap.cta.subtitle")}</p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ const ViewRecapCTA = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
           className=""
         >
-          <SparklesIcon className="w-5 h-5 text-white" />
+          <SparklesIcon className="h-5 w-5 text-white" />
         </motion.div>
       </motion.button>
     </motion.div>
