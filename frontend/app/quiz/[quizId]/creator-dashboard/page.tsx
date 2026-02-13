@@ -96,7 +96,7 @@ export default function CreatorDashboardPage() {
 
   if (error)
     return (
-      <div className="flex min-h-screen items-center justify-center p-6 text-center">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4 p-6 text-center">
         <p className="mb-4 text-red-500">{error}</p>
         <Button onClick={() => router.push("/")}>{t("global.goBack")}</Button>
       </div>
