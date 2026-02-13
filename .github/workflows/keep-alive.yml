@@ -1,0 +1,47 @@
+name: Keep Render Backend Alive
+
+on:
+    schedule:
+        # Every 13 minutes (cron runs every ~5 minutes minimum on free tier)
+        # This will execute ~4-5 times per hour
+        - cron: "*/13 * * * *"
+    workflow_dispatch: # Allow manual execution for testing
+
+jobs:
+    keep-alive:
+        runs-on: ubuntu-latest
+        name: Ping API Health
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Ping backend health endpoint
+              run: |
+                  BACKEND_URL="${{ secrets.BACKEND_URL }}"
+
+                  echo "🔔 Sending keep-alive ping to backend..."
+
+                  # Send request with timeout and verbose output
+                  curl -i \
+                    --max-time 10 \
+                    --retry 2 \
+                    --retry-delay 2 \
+                    --retry-max-time 15 \
+                    "${BACKEND_URL}/api/health"
+                    
+                  # Capture exit code
+                  EXIT_CODE=$?
+
+                  if [ $EXIT_CODE -eq 0 ]; then
+                    echo "✅ Keep-alive ping successful"
+                    exit 0
+                  else
+                    echo "❌ Keep-alive ping failed with exit code: $EXIT_CODE"
+                    exit 1
+                  fi
+
+            - name: Log timestamp
+              if: always()
+              run: |
+                  echo "⏱️ Ping executed at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
