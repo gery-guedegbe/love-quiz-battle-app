@@ -84,4 +84,43 @@ router.get(
   },
 );
 
+/**
+ * @swagger
+ * /api/analytics/admin/all:
+ *   get:
+ *     summary: Get all quizzes (admin only)
+ *     security:
+ *       - ApiKeyAuth: []
+ */
+router.get(
+  "/admin/all",
+  adminRateLimiter,
+  adminGuard,
+  auditLogMiddleware("GET_ALL_QUIZZES"),
+  async (req, res) => {
+    try {
+      const limit = Math.min(parseInt(req.query.limit) || 50, 500);
+      const offset = Math.max(parseInt(req.query.offset) || 0, 0);
+
+      const { data, count, error } = await supabase
+        .from("quizzes")
+        .select("*", { count: "exact" })
+        .order("created_at", { ascending: false })
+        .range(offset, offset + limit - 1);
+
+      if (error) throw error;
+
+      res.json({
+        data,
+        total: count,
+        limit,
+        offset,
+      });
+    } catch (error) {
+      console.error("[GET_ALL_QUIZZES]", error.message);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  },
+);
+
 module.exports = router;
