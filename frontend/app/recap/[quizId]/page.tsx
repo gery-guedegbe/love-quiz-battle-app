@@ -256,10 +256,7 @@ export default function QuizWrappedPage() {
             )}
 
             {currentSlide === 3 && (
-              <motion.div
-                key="starters"
-                className="absolute inset-0 md:relative"
-              >
+              <motion.div key="starters" className="absolute inset-0">
                 <ConversationStartersSlide quiz={quiz} />
               </motion.div>
             )}
