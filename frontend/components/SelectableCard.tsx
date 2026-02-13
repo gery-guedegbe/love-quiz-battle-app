@@ -20,35 +20,29 @@ export function SelectableCard({
     <motion.button
       onClick={onClick}
       whileTap={{ scale: 0.95 }}
-      className={`
-        relative p-5 md:p-6 rounded-3xl border-2 transition-all text-left w-full min-h-11
-        ${
-          selected
-            ? "bg-primary/5 border-primary shadow-lg"
-            : "bg-white border-gray-200 hover:border-gray-300 shadow-sm"
-        }
-      `}
+      className={`relative min-h-11 w-full rounded-3xl border-2 p-5 text-left transition-all md:p-6 ${
+        selected
+          ? "bg-primary/5 border-primary shadow-lg"
+          : "border-gray-200 bg-white shadow-sm hover:border-gray-300"
+      } `}
     >
       <div className="flex items-center justify-between gap-4">
         <div>
           <div
-            className={`font-semibold text-base md:text-lg ${selected ? "text-primary" : "text-gray-900"}`}
+            className={`text-base font-semibold md:text-lg ${selected ? "text-primary" : "text-gray-900"}`}
           >
             {label}
           </div>
 
           {description && (
-            <div className="text-sm text-gray-500 mt-1">{description}</div>
+            <div className="mt-1 text-sm text-gray-500">{description}</div>
           )}
         </div>
 
         <div
-          className={`
-            w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0
-            ${selected ? "bg-primary border-primary" : "border-gray-300"}
-          `}
+          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 ${selected ? "bg-primary border-primary" : "border-gray-300"} `}
         >
-          {selected && <Check className="w-4 h-4 text-white" />}
+          {selected && <Check className="h-4 w-4 text-white" />}
         </div>
       </div>
     </motion.button>

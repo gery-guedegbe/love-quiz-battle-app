@@ -30,13 +30,13 @@ export function KPICard({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+      className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
     >
-      <div className="flex items-start justify-between mb-4">
+      <div className="mb-4 flex items-start justify-between">
         <div
-          className={`w-12 h-12 rounded-xl ${colorClasses[color]} flex items-center justify-center`}
+          className={`h-12 w-12 rounded-xl ${colorClasses[color]} flex items-center justify-center`}
         >
-          <Icon className="w-6 h-6" />
+          <Icon className="h-6 w-6" />
         </div>
 
         {trend && (
@@ -52,7 +52,7 @@ export function KPICard({
       </div>
 
       <div className="space-y-1">
-        <p className="text-sm text-gray-600 font-medium">{title}</p>
+        <p className="text-sm font-medium text-gray-600">{title}</p>
         <p className="text-3xl font-bold text-gray-900">{value}</p>
       </div>
     </motion.div>

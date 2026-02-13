@@ -95,16 +95,16 @@ export default function SetupPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col p-6 max-w-md mx-auto">
+    <div className="mx-auto flex min-h-screen max-w-md flex-col p-6">
       {/* Header */}
       <div className="py-6">
-        <div className="flex items-center justify-between mb-6">
+        <div className="mb-6 flex items-center justify-between">
           <button
             onClick={handleBack}
             disabled={step === 1}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors disabled:opacity-0 min-w-11 min-h-11 flex items-center justify-center"
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-full p-2 transition-colors hover:bg-gray-100 disabled:opacity-0"
           >
-            <ArrowLeft className="w-6 h-6 text-gray-600" />
+            <ArrowLeft className="h-6 w-6 text-gray-600" />
           </button>
 
           <span className="text-sm font-medium text-gray-600">
@@ -116,7 +116,7 @@ export default function SetupPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col justify-center overflow-hidden">
+      <div className="flex flex-1 flex-col justify-center overflow-hidden">
         <AnimatePresence mode="wait">
           {step === 1 && (
             <motion.div
@@ -128,8 +128,8 @@ export default function SetupPage() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="space-y-8"
             >
-              <div className="space-y-3 lg:space-y-4 ">
-                <h2 className="text-4xl font-serif text-gray-900">
+              <div className="space-y-3 lg:space-y-4">
+                <h2 className="font-serif text-4xl text-gray-900">
                   {t("setup.step1Title")}
                   <br />
                   {t("setup.step1TitleBreak")}
@@ -164,7 +164,7 @@ export default function SetupPage() {
               className="space-y-8"
             >
               <div className="space-y-3 md:space-y-4">
-                <h2 className="text-4xl font-serif text-gray-900">
+                <h2 className="font-serif text-4xl text-gray-900">
                   {t("setup.languageTitle")}
                   <br />
                   {t("setup.languageTitleBreak")}
@@ -188,7 +188,7 @@ export default function SetupPage() {
                 />
 
                 {error && (
-                  <p className="text-sm text-red-500 text-center">{error}</p>
+                  <p className="text-center text-sm text-red-500">{error}</p>
                 )}
               </div>
             </motion.div>
@@ -205,7 +205,7 @@ export default function SetupPage() {
               className="space-y-4"
             >
               <div className="space-y-3 lg:space-y-4">
-                <h2 className="text-4xl font-serif text-gray-900">
+                <h2 className="font-serif text-4xl text-gray-900">
                   {t("setup.step2Title")}
                   <br />
                   {t("setup.step2TitleBreak")}
@@ -214,7 +214,7 @@ export default function SetupPage() {
                 <p className="text-gray-600">{t("setup.step2Subtitle")}</p>
               </div>
 
-              <div className="space-y-3 mt-6">
+              <div className="mt-6 space-y-3">
                 {[
                   {
                     value: 8,
@@ -253,7 +253,7 @@ export default function SetupPage() {
           {step === totalSteps
             ? t("setup.startButton")
             : t("setup.continueButton")}
-          <ArrowRight className="w-5 h-5" />
+          <ArrowRight className="h-5 w-5" />
         </Button>
       </div>
     </div>

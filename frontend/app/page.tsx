@@ -45,9 +45,9 @@ export default function LandingPage() {
     }
   };
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-4 p-4 md:p-6 max-w-md mx-auto">
+    <div className="mx-auto flex min-h-screen max-w-md flex-col items-center justify-center gap-4 p-4 md:p-6">
       {/* Hero Section */}
-      <div className=" flex flex-col items-center justify-center w-full space-y-8 py-8 md:py-12">
+      <div className="flex w-full flex-col items-center justify-center space-y-8 py-8 md:py-12">
         {/* Animated Icon */}
         <motion.div
           initial={{ scale: 0 }}
@@ -65,7 +65,7 @@ export default function LandingPage() {
               repeatDelay: 3,
             }}
           >
-            <Heart className="w-20 md:w-24 h-20 md:h-24 text-primary fill-primary" />
+            <Heart className="text-primary fill-primary h-20 w-20 md:h-24 md:w-24" />
           </motion.div>
 
           <motion.div
@@ -79,7 +79,7 @@ export default function LandingPage() {
             }}
             className="absolute top-2 -right-2 md:-top-2 md:-right-2"
           >
-            <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-custom-yellow" />
+            <Sparkles className="text-custom-yellow h-6 w-6 md:h-8 md:w-8" />
           </motion.div>
         </motion.div>
 
@@ -88,15 +88,15 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-center space-y-3 md:space-y-4"
+          className="space-y-3 text-center md:space-y-4"
         >
-          <h1 className="text-4xl lg:text-5xl font-serif text-gray-900 leading-tight">
+          <h1 className="font-serif text-4xl leading-tight text-gray-900 lg:text-5xl">
             {t("landing.title")}
             <br />
             <span className="text-primary">{t("landing.titleHighlight")}</span>
           </h1>
 
-          <p className="text-base md:text-lg text-gray-600 max-w-sm">
+          <p className="max-w-sm text-base text-gray-600 md:text-lg">
             {t("landing.subtitle")}
           </p>
         </motion.div>
@@ -108,9 +108,9 @@ export default function LandingPage() {
           transition={{ delay: 0.4 }}
           className="flex gap-2"
         >
-          <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-          <div className="w-2 h-2 bg-primary-light rounded-full animate-pulse delay-75" />
-          <div className="w-2 h-2 bg-primary-lighter rounded-full animate-pulse delay-150" />
+          <div className="bg-primary h-2 w-2 animate-pulse rounded-full" />
+          <div className="bg-primary-light h-2 w-2 animate-pulse rounded-full delay-75" />
+          <div className="bg-primary-lighter h-2 w-2 animate-pulse rounded-full delay-150" />
         </motion.div>
       </div>
 
@@ -137,7 +137,7 @@ export default function LandingPage() {
           {t("landing.createButton")}
         </Button>
 
-        <p className="text-xs text-center mt-6 text-gray-500">
+        <p className="mt-6 text-center text-xs text-gray-500">
           {t("landing.footer")}
         </p>
       </motion.div>

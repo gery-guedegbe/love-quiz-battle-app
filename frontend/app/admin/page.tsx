@@ -139,16 +139,16 @@ export default function AdminDashboardPage() {
   // ============================================
   if (loading && !stats) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <RefreshCw className="w-8 h-8 text-primary animate-spin" />
-        <p className="text-gray-600 ml-2">{t("global.loading")}</p>
+      <div className="flex min-h-screen items-center justify-center">
+        <RefreshCw className="text-primary h-8 w-8 animate-spin" />
+        <p className="ml-2 text-gray-600">{t("global.loading")}</p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-center p-6">
+      <div className="flex min-h-screen items-center justify-center p-6 text-center">
         <p className="text-red-500">{error}</p>
       </div>
     );
@@ -157,18 +157,18 @@ export default function AdminDashboardPage() {
   return (
     <div className="min-h-screen bg-[#F9FAFB]">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="sticky top-0 z-10 border-b border-gray-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
+          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center shadow-md">
-                <Heart className="w-6 h-6 text-white fill-white" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 shadow-md">
+                <Heart className="h-6 w-6 fill-white text-white" />
               </div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
+                <h1 className="text-xl font-bold text-gray-900 sm:text-2xl">
                   {t("admin.title")}
                 </h1>
-                <p className="text-xs sm:text-sm text-gray-600">
+                <p className="text-xs text-gray-600 sm:text-sm">
                   {t("admin.subtitle")}
                 </p>
               </div>
@@ -178,12 +178,12 @@ export default function AdminDashboardPage() {
               <button
                 onClick={handleGenerateSnapshot}
                 disabled={isGenerating}
-                className="px-4 py-2 bg-white border border-gray-200 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center gap-2 disabled:opacity-50 text-sm"
+                className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 disabled:opacity-50"
               >
                 {isGenerating ? (
-                  <RefreshCw className="w-4 h-4 animate-spin" />
+                  <RefreshCw className="h-4 w-4 animate-spin" />
                 ) : (
-                  <FileText className="w-4 h-4" />
+                  <FileText className="h-4 w-4" />
                 )}
                 {isGenerating
                   ? t("admin.snapshots.generating")
@@ -193,10 +193,10 @@ export default function AdminDashboardPage() {
               <button
                 onClick={handleRefresh}
                 disabled={loading}
-                className="px-4 py-2 bg-pink-600 text-white rounded-xl font-medium hover:bg-pink-700 transition-colors flex items-center gap-2 disabled:opacity-50 text-sm"
+                className="flex items-center gap-2 rounded-xl bg-pink-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-pink-700 disabled:opacity-50"
               >
                 <RefreshCw
-                  className={`w-4 h-4 ${loading ? "animate-spin" : ""}`}
+                  className={`h-4 w-4 ${loading ? "animate-spin" : ""}`}
                 />
                 {loading ? t("admin.refreshing") : t("admin.recalculate")}
               </button>
@@ -206,9 +206,9 @@ export default function AdminDashboardPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+      <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6">
         {/* KPI Cards - Vraies données */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           <KPICard
             title={t("admin.kpi.totalQuizzes")}
             value={stats?.totalQuizzes ?? 0}
@@ -236,19 +236,19 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Charts Section - Vraies données */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Growth Chart - Basé sur les vrais quizzes */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6">
+            <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
               <h2 className="text-lg font-bold text-gray-900">
                 {t("admin.charts.growth")}
               </h2>
-              <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1 self-start sm:self-auto">
+              <div className="flex items-center gap-1 self-start rounded-lg bg-gray-100 p-1 sm:self-auto">
                 {(["7d", "30d", "all"] as const).map((tf) => (
                   <button
                     key={tf}
                     onClick={() => setTimeframe(tf)}
-                    className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                    className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
                       timeframe === tf
                         ? "bg-white text-gray-900 shadow-sm"
                         : "text-gray-600 hover:text-gray-900"
@@ -265,12 +265,12 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* Score Distribution - Basé sur les vrais quizzes */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6">
             <div className="mb-6">
               <h2 className="text-lg font-bold text-gray-900">
                 {t("admin.charts.distribution")}
               </h2>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="mt-1 text-sm text-gray-600">
                 {t("admin.charts.distributionSubtitle")}
               </p>
             </div>
@@ -280,7 +280,7 @@ export default function AdminDashboardPage() {
 
         {/* Snapshots History - Vraies données */}
         {snapshots.length > 0 && (
-          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6">
             <div className="mb-4">
               <h2 className="text-lg font-bold text-gray-900">
                 {t("admin.snapshots.title")}
@@ -296,7 +296,7 @@ export default function AdminDashboardPage() {
             <h2 className="text-lg font-bold text-gray-900">
               {t("admin.recent.title")}
             </h2>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="mt-1 text-sm text-gray-600">
               {t("admin.recent.subtitle", { count: recentQuizzes.length })}
             </p>
           </div>

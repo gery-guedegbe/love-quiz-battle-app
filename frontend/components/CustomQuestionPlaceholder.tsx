@@ -18,7 +18,7 @@ export function CustomQuestionPlaceholder({
       onClick={onClick}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="w-full bg-white rounded-3xl shadow-lg border-2 border-dashed border-gray-300 p-6 md:p-8 hover:border-primary hover:shadow-xl transition-all min-h-50 flex flex-col items-center justify-center gap-3"
+      className="hover:border-primary flex min-h-50 w-full flex-col items-center justify-center gap-3 rounded-3xl border-2 border-dashed border-gray-300 bg-white p-6 shadow-lg transition-all hover:shadow-xl md:p-8"
     >
       <motion.div
         animate={{
@@ -30,11 +30,11 @@ export function CustomQuestionPlaceholder({
           repeatDelay: 1,
         }}
       >
-        <Plus className="w-8 md:w-12 h-8 md:h-12 text-gray-400" />
+        <Plus className="h-8 w-8 text-gray-400 md:h-12 md:w-12" />
       </motion.div>
 
-      <div className="text-center space-y-2">
-        <h4 className="text-lg font-semibold text-gray-900 mb-1">
+      <div className="space-y-2 text-center">
+        <h4 className="mb-1 text-lg font-semibold text-gray-900">
           {t("creation.customTitle")}
           {index + 1}
         </h4>
@@ -42,8 +42,8 @@ export function CustomQuestionPlaceholder({
         <p className="text-sm text-gray-500">{t("creation.customSubtitle")}</p>
       </div>
 
-      <div className="flex items-center gap-1 text-xs text-primary font-medium">
-        <Sparkles className="w-3 h-3" />
+      <div className="text-primary flex items-center gap-1 text-xs font-medium">
+        <Sparkles className="h-3 w-3" />
         <span>{t("creation.customBadge")}</span>
       </div>
     </motion.button>

@@ -39,15 +39,10 @@ export function Button({
       type={type}
       onClick={onClick}
       disabled={disabled || loading}
-      className={`
-        ${baseStyles}
-        ${variants[variant]}
-        ${disabled || loading ? disabledStyles : ""}
-        ${fullWidth ? "w-full" : ""}
-      `}
+      className={` ${baseStyles} ${variants[variant]} ${disabled || loading ? disabledStyles : ""} ${fullWidth ? "w-full" : ""} `}
       whileTap={disabled || loading ? {} : { scale: 0.95 }}
     >
-      {loading && <Loader2 className="w-5 h-5 animate-spin" />}
+      {loading && <Loader2 className="h-5 w-5 animate-spin" />}
       {children}
     </motion.button>
   );

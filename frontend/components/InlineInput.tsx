@@ -46,7 +46,7 @@ export function InlineInput({
       <motion.div
         onClick={() => setIsEditing(true)}
         whileHover={{ scale: 1.01 }}
-        className={`cursor-pointer hover:bg-gray-50 rounded-lg px-3 py-2 transition-colors ${className}`}
+        className={`cursor-pointer rounded-lg px-3 py-2 transition-colors hover:bg-gray-50 ${className}`}
       >
         {value || <span className="text-gray-400">{placeholder}</span>}
       </motion.div>

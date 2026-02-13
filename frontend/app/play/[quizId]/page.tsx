@@ -66,7 +66,7 @@ export default function PlayPage() {
 
   if (loading)
     return (
-      <div className="p-6 text-center flex items-center justify-center w-full h-screen text-sm md:text-base">
+      <div className="flex h-screen w-full items-center justify-center p-6 text-center text-sm md:text-base">
         {t("common.loading")}
       </div>
     );
@@ -77,7 +77,7 @@ export default function PlayPage() {
     }, 1500);
 
     return (
-      <div className="p-6 text-center flex items-center justify-center w-full h-screen text-sm md:text-base text-red-500">
+      <div className="flex h-screen w-full items-center justify-center p-6 text-center text-sm text-red-500 md:text-base">
         {error}
       </div>
     );
@@ -149,15 +149,15 @@ export default function PlayPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col px-4 md:px-6 pt-20 md:pt-6 max-w-md mx-auto">
+    <div className="mx-auto flex min-h-screen max-w-md flex-col px-4 pt-20 md:px-6 md:pt-6">
       {/* Header */}
-      <div className="py-4 space-y-4">
+      <div className="space-y-4 py-4">
         <div className="text-center">
-          <h1 className="text-2xl font-serif text-gray-900">
+          <h1 className="font-serif text-2xl text-gray-900">
             {t("play.title")}
           </h1>
 
-          <p className="text-3xl font-serif text-primary">
+          <p className="text-primary font-serif text-3xl">
             {quiz.creator_name}?
           </p>
         </div>
@@ -166,7 +166,7 @@ export default function PlayPage() {
       </div>
 
       {/* Question */}
-      <div className="flex-1 flex flex-col justify-center py-8">
+      <div className="flex flex-1 flex-col justify-center py-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -177,8 +177,8 @@ export default function PlayPage() {
             className="space-y-6"
           >
             {/* Question Card */}
-            <div className="bg-white rounded-3xl shadow-lg p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900 text-center">
+            <div className="rounded-3xl bg-white p-4 shadow-lg md:p-6">
+              <h3 className="text-center text-xl font-semibold text-gray-900 md:text-2xl">
                 {currentQuestion.question_text}
               </h3>
             </div>
@@ -199,18 +199,13 @@ export default function PlayPage() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className={`
-                        w-full p-4 md:p-5 rounded-2xl border-2 transition-all
-                        flex items-center justify-between gap-3 min-h-11
-                        ${optionStyles[state]}
-                        ${
-                          isDisabled
-                            ? "cursor-default"
-                            : "cursor-pointer hover:shadow-md"
-                        }
-                      `}
+                      className={`flex min-h-11 w-full items-center justify-between gap-3 rounded-2xl border-2 p-4 transition-all md:p-5 ${optionStyles[state]} ${
+                        isDisabled
+                          ? "cursor-default"
+                          : "cursor-pointer hover:shadow-md"
+                      } `}
                     >
-                      <span className="font-medium text-base md:text-lg flex-1 text-left">
+                      <span className="flex-1 text-left text-base font-medium md:text-lg">
                         {option.text}
                       </span>
 
@@ -224,7 +219,7 @@ export default function PlayPage() {
                             damping: 25,
                           }}
                         >
-                          <Check className="w-6 h-6 md:flex hidden" />
+                          <Check className="hidden h-6 w-6 md:flex" />
                         </motion.div>
                       )}
 
@@ -238,7 +233,7 @@ export default function PlayPage() {
                             damping: 25,
                           }}
                         >
-                          <X className="w-6 h-6 md:flex hidden" />
+                          <X className="hidden h-6 w-6 md:flex" />
                         </motion.div>
                       )}
                     </motion.button>
@@ -260,18 +255,13 @@ export default function PlayPage() {
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className={`
-                       p-4 md:p-8 rounded-2xl border-2 transition-all
-                        flex flex-col items-center justify-center gap-3 min-h-22
-                        ${optionStyles[state]}
-                        ${
-                          isDisabled
-                            ? "cursor-default"
-                            : "cursor-pointer hover:shadow-lg"
-                        }
-                      `}
+                      className={`flex min-h-22 flex-col items-center justify-center gap-3 rounded-2xl border-2 p-4 transition-all md:p-8 ${optionStyles[state]} ${
+                        isDisabled
+                          ? "cursor-default"
+                          : "cursor-pointer hover:shadow-lg"
+                      } `}
                     >
-                      <span className="font-semibold text-xl md:text-2xl">
+                      <span className="text-xl font-semibold md:text-2xl">
                         {option.text}
                       </span>
 
@@ -284,9 +274,9 @@ export default function PlayPage() {
                             stiffness: 500,
                             damping: 25,
                           }}
-                          className="md:flex hidden"
+                          className="hidden md:flex"
                         >
-                          <Check className="w-7 h-7 " />
+                          <Check className="h-7 w-7" />
                         </motion.div>
                       )}
 
@@ -299,9 +289,9 @@ export default function PlayPage() {
                             stiffness: 500,
                             damping: 25,
                           }}
-                          className="md:flex hidden"
+                          className="hidden md:flex"
                         >
-                          <X className="w-7 h-7" />
+                          <X className="h-7 w-7" />
                         </motion.div>
                       )}
                     </motion.button>
@@ -321,7 +311,7 @@ export default function PlayPage() {
           className="py-6 text-center"
         >
           <p
-            className={`text-base md:text-lg font-medium ${
+            className={`text-base font-medium md:text-lg ${
               selectedOption === currentQuestion.correct_answer_index
                 ? "text-success"
                 : "text-primary"

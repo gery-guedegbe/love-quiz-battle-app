@@ -16,22 +16,22 @@ export function TypeSwitcher({
   const { t } = useLanguage();
 
   return (
-    <div className="inline-flex bg-gray-100 rounded-full p-1 gap-1">
+    <div className="inline-flex gap-1 rounded-full bg-gray-100 p-1">
       <button
         onClick={() => onChange("multiple-choice")}
         disabled={disabled}
-        className="relative px-3 md:px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2"
+        className="relative flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition-colors md:px-4"
       >
         {type === "multiple-choice" && (
           <motion.div
             layoutId="type-bg"
-            className="absolute inset-0 bg-white rounded-full shadow-md"
+            className="absolute inset-0 rounded-full bg-white shadow-md"
             transition={{ type: "spring", stiffness: 500, damping: 35 }}
           />
         )}
 
         <ListChecks
-          className={`w-4 h-4 relative md:flex hidden z-10 ${
+          className={`relative z-10 hidden h-4 w-4 md:flex ${
             type === "multiple-choice" ? "text-primary" : "text-gray-600"
           }`}
         />
@@ -48,18 +48,18 @@ export function TypeSwitcher({
       <button
         onClick={() => onChange("yes-no")}
         disabled={disabled}
-        className="relative px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2"
+        className="relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors"
       >
         {type === "yes-no" && (
           <motion.div
             layoutId="type-bg"
-            className="absolute inset-0 bg-white rounded-full shadow-md"
+            className="absolute inset-0 rounded-full bg-white shadow-md"
             transition={{ type: "spring", stiffness: 500, damping: 35 }}
           />
         )}
 
         <CheckCircle
-          className={`w-4 h-4 relative md:flex hidden z-10 ${
+          className={`relative z-10 hidden h-4 w-4 md:flex ${
             type === "yes-no" ? "text-primary" : "text-gray-600"
           }`}
         />

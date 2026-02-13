@@ -27,8 +27,8 @@ export function SnapshotsList({ snapshots }: SnapshotsListProps) {
 
   if (snapshots.length === 0) {
     return (
-      <div className="text-center py-8 text-gray-500">
-        <Database className="w-12 h-12 mx-auto mb-3 text-gray-400" />
+      <div className="py-8 text-center text-gray-500">
+        <Database className="mx-auto mb-3 h-12 w-12 text-gray-400" />
         <p>No snapshots available</p>
       </div>
     );
@@ -42,24 +42,24 @@ export function SnapshotsList({ snapshots }: SnapshotsListProps) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.05 }}
-          className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
+          className="flex flex-col justify-between rounded-xl bg-gray-50 p-4 transition-colors hover:bg-gray-100 sm:flex-row sm:items-center"
         >
-          <div className="flex items-center gap-3 mb-2 sm:mb-0">
-            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-              <Database className="w-5 h-5 text-gray-600" />
+          <div className="mb-2 flex items-center gap-3 sm:mb-0">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white shadow-sm">
+              <Database className="h-5 w-5 text-gray-600" />
             </div>
             <div>
               <p className="text-sm font-medium text-gray-900">
                 {t("admin.snapshots.lastCalculated")}
               </p>
               <div className="flex items-center gap-2 text-xs text-gray-600">
-                <Calendar className="w-3 h-3" />
+                <Calendar className="h-3 w-3" />
                 <span>{formatDate(snapshot.last_calculated_at)}</span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 ml-13 sm:ml-0">
+          <div className="ml-13 flex items-center gap-4 sm:ml-0">
             <div className="text-right">
               <p className="text-xs text-gray-500">Quizzes</p>
               <p className="text-sm font-semibold text-gray-900">

@@ -29,8 +29,8 @@ export function DataSummarySlide({ quiz }: DataSummarySlideProps) {
   const badgeColor = getBadgeColor(score);
 
   return (
-    <div className="h-full flex flex-col items-center justify-center p-8 bg-linear-to-br from-white via-[#FFE5E5]/30 to-white">
-      <div className="max-w-sm w-full space-y-8">
+    <div className="flex h-full flex-col items-center justify-center bg-linear-to-br from-white via-[#FFE5E5]/30 to-white p-8">
+      <div className="w-full max-w-sm space-y-8">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export function DataSummarySlide({ quiz }: DataSummarySlideProps) {
           transition={{ delay: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-serif text-gray-900 mb-2">
+          <h2 className="mb-2 font-serif text-3xl text-gray-900">
             {t("results.dataSummary.title")}
           </h2>
 
@@ -60,9 +60,9 @@ export function DataSummarySlide({ quiz }: DataSummarySlideProps) {
             damping: 20,
             delay: 0.4,
           }}
-          className="relative flex items-center justify-center text-center mx-auto"
+          className="relative mx-auto flex items-center justify-center text-center"
         >
-          <svg className="w-64 h-64 transform -rotate-90">
+          <svg className="h-64 w-64 -rotate-90 transform">
             <defs>
               <linearGradient
                 id="progressGradient"
@@ -114,13 +114,13 @@ export function DataSummarySlide({ quiz }: DataSummarySlideProps) {
               className="text-center"
             >
               <div
-                className="text-7xl font-serif mb-2"
+                className="mb-2 font-serif text-7xl"
                 style={{ color: badgeColor }}
               >
                 {score}%
               </div>
 
-              <div className="text-sm text-gray-600 font-medium">
+              <div className="text-sm font-medium text-gray-600">
                 {t("results.dataSummary.matchScore")}
               </div>
             </motion.div>
@@ -134,10 +134,10 @@ export function DataSummarySlide({ quiz }: DataSummarySlideProps) {
           transition={{ delay: 1.2 }}
           className="grid grid-cols-3 gap-4"
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-lg text-center">
-            <Target className="w-6 h-6 text-primary mx-auto mb-2" />
+          <div className="rounded-3xl bg-white/80 p-4 text-center shadow-lg backdrop-blur-sm">
+            <Target className="text-primary mx-auto mb-2 h-6 w-6" />
 
-            <div className="text-2xl font-serif text-gray-900">
+            <div className="font-serif text-2xl text-gray-900">
               {totalQuestions}
             </div>
 
@@ -146,10 +146,10 @@ export function DataSummarySlide({ quiz }: DataSummarySlideProps) {
             </div>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-lg text-center">
-            <CheckCircle className="w-6 h-6 text-success mx-auto mb-2" />
+          <div className="rounded-3xl bg-white/80 p-4 text-center shadow-lg backdrop-blur-sm">
+            <CheckCircle className="text-success mx-auto mb-2 h-6 w-6" />
 
-            <div className="text-2xl font-serif text-success">
+            <div className="text-success font-serif text-2xl">
               {correctAnswers}
             </div>
 
@@ -158,10 +158,10 @@ export function DataSummarySlide({ quiz }: DataSummarySlideProps) {
             </div>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 shadow-lg text-center">
-            <Award className="w-6 h-6 text-custom-yellow mx-auto mb-2" />
+          <div className="rounded-3xl bg-white/80 p-4 text-center shadow-lg backdrop-blur-sm">
+            <Award className="text-custom-yellow mx-auto mb-2 h-6 w-6" />
 
-            <div className="text-2xl font-serif text-gray-900">
+            <div className="font-serif text-2xl text-gray-900">
               {quiz.questions.length}
             </div>
 

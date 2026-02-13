@@ -19,19 +19,19 @@ export function GlobalLanguageToggle() {
       animate={{ opacity: 1, y: 0 }}
       className="flex items-center gap-2"
     >
-      <Globe className="w-4 h-4 text-gray-500" />
+      <Globe className="h-4 w-4 text-gray-500" />
 
-      <div className="inline-flex bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-1 gap-1 border border-gray-200">
+      <div className="inline-flex gap-1 rounded-full border border-gray-200 bg-white/90 p-1 shadow-lg backdrop-blur-sm">
         {languages.map((lang) => (
           <button
             key={lang.value}
             onClick={() => setLanguage(lang.value)}
-            className="relative px-3 py-1.5 rounded-full text-xs font-semibold transition-colors min-h-8 min-w-8"
+            className="relative min-h-8 min-w-8 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors"
           >
             {language === lang.value && (
               <motion.div
                 layoutId="language-bg"
-                className="absolute inset-0 bg-primary rounded-full"
+                className="bg-primary absolute inset-0 rounded-full"
                 transition={{ type: "spring", stiffness: 500, damping: 35 }}
               />
             )}

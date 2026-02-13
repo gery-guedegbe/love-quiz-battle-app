@@ -49,7 +49,7 @@ export function QuestionEditorCard({
   return (
     <motion.div
       layout
-      className="bg-white rounded-3xl shadow-lg p-4 md:p-6 space-y-6"
+      className="space-y-6 rounded-3xl bg-white p-4 shadow-lg md:p-6"
     >
       {/* Header */}
       <div className="flex items-center justify-between gap-4">
@@ -69,16 +69,16 @@ export function QuestionEditorCard({
           <motion.button
             onClick={onShuffle}
             whileTap={{ scale: 0.9, rotate: 180 }}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors flex items-center justify-center"
+            className="flex items-center justify-center rounded-full p-2 transition-colors hover:bg-gray-100"
           >
-            <Shuffle className="h-4 w-4 md:w-5 md:h-5 text-gray-600" />
+            <Shuffle className="h-4 w-4 text-gray-600 md:h-5 md:w-5" />
           </motion.button>
         )}
       </div>
 
       {/* Question Text */}
       <div>
-        <label className="block text-xs md:text-sm font-medium text-gray-500 mb-2 ml-3">
+        <label className="mb-2 ml-3 block text-xs font-medium text-gray-500 md:text-sm">
           {t("creation.questionLabel")}
         </label>
 
@@ -88,13 +88,13 @@ export function QuestionEditorCard({
           placeholder={t("creation.questionPlaceholder")}
           multiline
           maxLength={150}
-          className="text-lg md:text-xl font-semibold text-gray-900"
+          className="text-lg font-semibold text-gray-900 md:text-xl"
         />
       </div>
 
       {/* Options */}
       <div>
-        <label className="block text-xs md:text-sm font-medium text-gray-500 mb-3 ml-3">
+        <label className="mb-3 ml-3 block text-xs font-medium text-gray-500 md:text-sm">
           {t("creation.optionsLabel")}
         </label>
 
@@ -116,10 +116,10 @@ export function QuestionEditorCard({
                     role === "creator" &&
                     onUpdate({ correct_answer_index: index })
                   }
-                  className={`w-full p-2 md:p-4 rounded-2xl border-2 transition-all text-left flex items-center justify-between gap-2 md:gap-3 min-h-11 ${
+                  className={`flex min-h-11 w-full items-center justify-between gap-2 rounded-2xl border-2 p-2 text-left transition-all md:gap-3 md:p-4 ${
                     question.correct_answer_index === index
                       ? "bg-success/10 border-success"
-                      : "bg-white border-gray-200 hover:border-gray-300"
+                      : "border-gray-200 bg-white hover:border-gray-300"
                   }`}
                 >
                   <div className="flex-1">
@@ -130,7 +130,7 @@ export function QuestionEditorCard({
                         65 + index,
                       )}`}
                       maxLength={80}
-                      className={`text-sm md:text-base font-medium ${
+                      className={`text-sm font-medium md:text-base ${
                         question.correct_answer_index === index
                           ? "text-success"
                           : "text-gray-900"
@@ -139,7 +139,7 @@ export function QuestionEditorCard({
                   </div>
 
                   {question.correct_answer_index === index && (
-                    <Check className="w-4 md:w-5 h-4 md:h-5 text-success shrink-0" />
+                    <Check className="text-success h-4 w-4 shrink-0 md:h-5 md:w-5" />
                   )}
                 </motion.button>
               ))}
@@ -161,14 +161,14 @@ export function QuestionEditorCard({
                     role === "creator" &&
                     onUpdate({ correct_answer_index: index })
                   }
-                  className={`p-3 md:p-6 rounded-2xl border-2 transition-all flex flex-col items-center justify-center gap-2 ${
+                  className={`flex flex-col items-center justify-center gap-2 rounded-2xl border-2 p-3 transition-all md:p-6 ${
                     question.correct_answer_index === index
                       ? "bg-success/10 border-success shadow-lg"
-                      : "bg-white border-gray-200 hover:border-gray-300"
+                      : "border-gray-200 bg-white hover:border-gray-300"
                   }`}
                 >
                   <span
-                    className={`text-base md:text-2xl font-semibold ${
+                    className={`text-base font-semibold md:text-2xl ${
                       question.correct_answer_index === index
                         ? "text-success"
                         : "text-gray-900"
@@ -178,7 +178,7 @@ export function QuestionEditorCard({
                   </span>
 
                   {question.correct_answer_index === index && (
-                    <Check className="w-4 md:w-6 h-4 md:h-6 hidden md:flex text-success" />
+                    <Check className="text-success hidden h-4 w-4 md:flex md:h-6 md:w-6" />
                   )}
                 </motion.button>
               ))}

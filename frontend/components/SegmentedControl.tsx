@@ -12,17 +12,17 @@ export function SegmentedControl({
   onChange,
 }: SegmentedControlProps) {
   return (
-    <div className="inline-flex bg-gray-100 rounded-full p-1 gap-1">
+    <div className="inline-flex gap-1 rounded-full bg-gray-100 p-1">
       {options.map((option) => (
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className="relative px-6 py-2 rounded-full text-sm font-medium transition-colors min-h-11 min-w-11"
+          className="relative min-h-11 min-w-11 rounded-full px-6 py-2 text-sm font-medium transition-colors"
         >
           {selected === option.value && (
             <motion.div
               layoutId="segmented-bg"
-              className="absolute inset-0 bg-white rounded-full shadow-md"
+              className="absolute inset-0 rounded-full bg-white shadow-md"
               transition={{ type: "spring", stiffness: 500, damping: 35 }}
             />
           )}

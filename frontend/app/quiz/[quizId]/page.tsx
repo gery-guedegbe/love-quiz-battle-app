@@ -93,7 +93,7 @@ export default function QuizReadyPage() {
   // ---------------- Loading ----------------
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         <p className="text-gray-600">{t("quizReady.loading")}</p>
       </div>
     );
@@ -102,7 +102,7 @@ export default function QuizReadyPage() {
   // ---------------- Error ----------------
   if (error || !quiz) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         <p className="text-gray-600">{t("quizReady.notFound")}</p>
       </div>
     );
@@ -110,8 +110,8 @@ export default function QuizReadyPage() {
 
   // ---------------- UI ----------------
   return (
-    <div className="min-h-screen flex flex-col items-center justify-between p-4 md:p-6 max-w-md mx-auto">
-      <div className="flex-1 flex flex-col items-center justify-center w-full space-y-4 md:space-y-8 py-12">
+    <div className="mx-auto flex min-h-screen max-w-md flex-col items-center justify-between p-4 md:p-6">
+      <div className="flex w-full flex-1 flex-col items-center justify-center space-y-4 py-12 md:space-y-8">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -121,8 +121,8 @@ export default function QuizReadyPage() {
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <div className="w-18 md:w-24 h-18 md:h-24 bg-linear-to-br from-primary to-primary-light rounded-full flex items-center justify-center shadow-lg">
-              <Check className="w-8 md:w-12 h-8 md:h-12 text-white" />
+            <div className="from-primary to-primary-light flex h-18 w-18 items-center justify-center rounded-full bg-linear-to-br shadow-lg md:h-24 md:w-24">
+              <Check className="h-8 w-8 text-white md:h-12 md:w-12" />
             </div>
           </motion.div>
         </motion.div>
@@ -131,15 +131,15 @@ export default function QuizReadyPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-center space-y-4"
+          className="space-y-4 text-center"
         >
-          <h1 className="text-4xl lg:text-5xl font-serif text-gray-900">
+          <h1 className="font-serif text-4xl text-gray-900 lg:text-5xl">
             {t("quizReady.titlePart1")}
             <br />
             <span className="text-primary">{t("quizReady.titlePart2")}</span>
           </h1>
 
-          <p className="text-base md:text-lg text-gray-600 max-w-sm">
+          <p className="max-w-sm text-base text-gray-600 md:text-lg">
             {t("quizReady.subtitle", { partnerName: quiz.partner_name })}
           </p>
         </motion.div>
@@ -148,9 +148,9 @@ export default function QuizReadyPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="w-full bg-white rounded-3xl shadow-lg p-4 md:p-6 space-y-4"
+          className="w-full space-y-4 rounded-3xl bg-white p-4 shadow-lg md:p-6"
         >
-          <div className="flex items-center justify-between pb-4 border-b border-gray-100">
+          <div className="flex items-center justify-between border-b border-gray-100 pb-4">
             <div className="space-y-1 md:space-y-2">
               <p className="text-sm text-gray-500">{t("quizReady.quizBy")}</p>
 
@@ -159,36 +159,36 @@ export default function QuizReadyPage() {
               </p>
             </div>
 
-            <div className="text-right space-y-1 md:space-y-2">
+            <div className="space-y-1 text-right md:space-y-2">
               <p className="text-sm text-gray-500">
                 {t("quizReady.questions")}
               </p>
 
-              <p className="text-2xl font-serif text-primary">
+              <p className="text-primary font-serif text-2xl">
                 {quiz.questions.length}
               </p>
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-2">
+            <label className="mb-2 block text-xs font-medium text-gray-500">
               {t("quizReady.shareableLink")}
             </label>
 
             <div className="flex gap-2">
-              <div className="flex-1 px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 text-sm text-gray-600 truncate font-mono">
+              <div className="flex-1 truncate rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 font-mono text-sm text-gray-600">
                 {shareUrl}
               </div>
 
               <button
                 onClick={handleCopyLink}
                 aria-label={copied ? t("quizReady.copySuccess") : "Copy link"}
-                className="p-3 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors flex items-center justify-center"
+                className="flex items-center justify-center rounded-xl bg-gray-100 p-3 transition-colors hover:bg-gray-200"
               >
                 {copied ? (
-                  <Check className="w-4 md:w-5 h-4 md:h-5 text-success" />
+                  <Check className="text-success h-4 w-4 md:h-5 md:w-5" />
                 ) : (
-                  <Copy className="w-4 md:w-5 h-4 md:h-5 text-gray-600" />
+                  <Copy className="h-4 w-4 text-gray-600 md:h-5 md:w-5" />
                 )}
               </button>
             </div>
@@ -203,12 +203,12 @@ export default function QuizReadyPage() {
         className="w-full space-y-3 pb-6"
       >
         <Button onClick={handleShare} fullWidth>
-          <ExternalLink className="w-4 md:w-5 h-4 md:h-5" />
+          <ExternalLink className="h-4 w-4 md:h-5 md:w-5" />
           {t("quizReady.shareButton", { partnerName: quiz.partner_name })}
         </Button>
 
         <Button onClick={handleDashboard} variant="secondary" fullWidth>
-          <BarChart3 className="w-4 md:w-5 h-4 md:h-5" />
+          <BarChart3 className="h-4 w-4 md:h-5 md:w-5" />
           {t("quizReady.dashboardButton")}
         </Button>
       </motion.div>

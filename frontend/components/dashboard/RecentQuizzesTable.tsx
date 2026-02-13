@@ -35,44 +35,44 @@ export function RecentQuizzesTable({
 
   if (quizzes.length === 0) {
     return (
-      <div className="bg-white rounded-2xl border border-gray-200 p-12 text-center">
+      <div className="rounded-2xl border border-gray-200 bg-white p-12 text-center">
         <p className="text-gray-500">{t("admin.recent.noData")}</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
       {/* Desktop Table */}
-      <div className="hidden md:block overflow-x-auto">
+      <div className="hidden overflow-x-auto md:block">
         <table className="w-full">
-          <thead className="bg-gray-50 border-b border-gray-200">
+          <thead className="border-b border-gray-200 bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase">
                 {t("admin.recent.creator")}
               </th>
 
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase">
                 {t("admin.recent.partner")}
               </th>
 
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase">
                 {t("admin.recent.questions")}
               </th>
 
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase">
                 {t("admin.recent.status")}
               </th>
 
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase">
                 {t("admin.recent.score")}
               </th>
 
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase">
                 {t("admin.recent.created")}
               </th>
 
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase">
                 {t("admin.recent.action")}
               </th>
             </tr>
@@ -84,23 +84,23 @@ export function RecentQuizzesTable({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.03 }}
-                className="hover:bg-gray-50 transition-colors"
+                className="transition-colors hover:bg-gray-50"
               >
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <td className="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900">
                   {quiz.creatorName}
                 </td>
 
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-600">
                   {quiz.partnerName}
                 </td>
 
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-600">
                   {quiz.questionCount}
                 </td>
 
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span
-                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                    className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
                       quiz.status === "completed"
                         ? "bg-emerald-100 text-emerald-800"
                         : "bg-amber-100 text-amber-800"
@@ -112,20 +112,20 @@ export function RecentQuizzesTable({
                   </span>
                 </td>
 
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <td className="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900">
                   {quiz.status === "completed" ? `${quiz.score}%` : "—"}
                 </td>
 
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-600">
                   {formatDate(quiz.createdAt)}
                 </td>
 
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
+                <td className="px-6 py-4 text-sm whitespace-nowrap">
                   <button
                     onClick={() => onViewDetails(quiz.id)}
-                    className="inline-flex items-center gap-1 text-pink-600 hover:text-pink-700 font-medium"
+                    className="inline-flex items-center gap-1 font-medium text-pink-600 hover:text-pink-700"
                   >
-                    <Eye className="w-4 h-4" />
+                    <Eye className="h-4 w-4" />
                     {t("admin.recent.view")}
                   </button>
                 </td>
@@ -136,23 +136,23 @@ export function RecentQuizzesTable({
       </div>
 
       {/* Mobile Cards */}
-      <div className="md:hidden divide-y divide-gray-200">
+      <div className="divide-y divide-gray-200 md:hidden">
         {quizzes.map((quiz, index) => (
           <motion.div
             key={quiz.id}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.03 }}
-            className="p-4 hover:bg-gray-50 transition-colors"
+            className="p-4 transition-colors hover:bg-gray-50"
           >
-            <div className="flex items-start justify-between mb-2">
+            <div className="mb-2 flex items-start justify-between">
               <div>
                 <p className="font-medium text-gray-900">{quiz.creatorName}</p>
                 <p className="text-sm text-gray-600">→ {quiz.partnerName}</p>
               </div>
 
               <span
-                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
                   quiz.status === "completed"
                     ? "bg-emerald-100 text-emerald-800"
                     : "bg-amber-100 text-amber-800"
@@ -164,7 +164,7 @@ export function RecentQuizzesTable({
               </span>
             </div>
 
-            <div className="flex items-center justify-between text-sm text-gray-600 mb-3">
+            <div className="mb-3 flex items-center justify-between text-sm text-gray-600">
               <span>
                 {quiz.questionCount} {t("admin.recent.questions").toLowerCase()}
               </span>
@@ -173,16 +173,16 @@ export function RecentQuizzesTable({
             </div>
 
             {quiz.status === "completed" && (
-              <p className="text-sm font-medium text-gray-900 mb-3">
+              <p className="mb-3 text-sm font-medium text-gray-900">
                 {t("admin.recent.score")}: {quiz.score}%
               </p>
             )}
 
             <button
               onClick={() => onViewDetails(quiz.id)}
-              className="inline-flex items-center gap-1 text-pink-600 hover:text-pink-700 font-medium text-sm"
+              className="inline-flex items-center gap-1 text-sm font-medium text-pink-600 hover:text-pink-700"
             >
-              <Eye className="w-4 h-4" />
+              <Eye className="h-4 w-4" />
 
               {t("admin.recent.viewDetails")}
             </button>

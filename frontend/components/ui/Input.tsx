@@ -33,24 +33,19 @@ export function Input({
           onBlur={() => setIsFocused(false)}
           placeholder={placeholder}
           maxLength={maxLength}
-          className={`
-            w-full px-4 md:px-6 py-4 rounded-2xl border-2 bg-white
-            transition-all outline-none text-base min-h-11
-            ${
-              error
-                ? "border-primary-light focus:border-primary-light focus:ring-4 focus:ring-primary-light/20"
-                : isFocused
-                  ? "border-primary ring-4 ring-primary/20"
-                  : "border-gray-200 hover:border-gray-300"
-            }
-            ${value ? "pt-6 pb-2" : ""}
-          `}
+          className={`min-h-11 w-full rounded-2xl border-2 bg-white px-4 py-4 text-base transition-all outline-none md:px-6 ${
+            error
+              ? "border-primary-light focus:border-primary-light focus:ring-primary-light/20 focus:ring-4"
+              : isFocused
+                ? "border-primary ring-primary/20 ring-4"
+                : "border-gray-200 hover:border-gray-300"
+          } ${value ? "pt-6 pb-2" : ""} `}
         />
         {label && value && (
           <motion.label
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="absolute left-6 top-2 text-xs text-gray-500"
+            className="absolute top-2 left-6 text-xs text-gray-500"
           >
             {label}
           </motion.label>
@@ -60,7 +55,7 @@ export function Input({
         <motion.p
           initial={{ opacity: 0, y: -5 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-sm text-primary-light mt-2 ml-2"
+          className="text-primary-light mt-2 ml-2 text-sm"
         >
           {error}
         </motion.p>

@@ -64,9 +64,9 @@ export function RecapHeaderButton() {
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm shadow-lg rounded-full border border-gray-200 hover:border-primtext-primary transition-colors"
+      className="hover:border-primtext-primary fixed top-6 left-6 z-50 flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 px-4 py-2 shadow-lg backdrop-blur-sm transition-colors"
     >
-      <Sparkles className="w-4 h-4 text-primary" />
+      <Sparkles className="text-primary h-4 w-4" />
 
       <span className="text-sm font-semibold text-gray-900">
         {t("recap.button")}

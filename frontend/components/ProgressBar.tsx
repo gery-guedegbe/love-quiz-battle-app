@@ -12,20 +12,20 @@ export function ProgressBar({ current, total }: ProgressBarProps) {
 
   return (
     <div className="w-full">
-      <div className="flex items-center justify-between mb-2">
+      <div className="mb-2 flex items-center justify-between">
         <span className="text-sm font-medium text-gray-600">
           {t("creation.questionOf")} {current} {t("setup.stepOf").toLowerCase()}{" "}
           {total}
         </span>
 
-        <span className="text-sm font-medium text-primary">
+        <span className="text-primary text-sm font-medium">
           {Math.round(percentage)}%
         </span>
       </div>
 
-      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+      <div className="h-2 overflow-hidden rounded-full bg-gray-200">
         <motion.div
-          className="h-full bg-linear-to-r from-primary to-primary-light"
+          className="from-primary to-primary-light h-full bg-linear-to-r"
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}

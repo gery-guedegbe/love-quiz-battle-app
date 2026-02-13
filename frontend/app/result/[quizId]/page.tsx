@@ -141,7 +141,7 @@ export default function ResultPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         {t("common.loading")}
       </div>
     );
@@ -149,16 +149,16 @@ export default function ResultPage() {
 
   if (error || !quiz) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-red-500">
+      <div className="flex min-h-screen items-center justify-center text-red-500">
         {t("common.error")}
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-between p-4 md:p-6 max-w-md mx-auto">
+    <div className="mx-auto flex min-h-screen max-w-md flex-col items-center justify-between p-4 md:p-6">
       {/* Confetti Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
         {Array.from({ length: 30 }).map((_, i) => (
           <motion.div
             key={i}
@@ -190,7 +190,7 @@ export default function ResultPage() {
       </div>
 
       {/* Results Content */}
-      <div className="flex-1 flex flex-col items-center justify-center w-full space-y-8 pt-18 md:pt-6 relative z-10">
+      <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-center space-y-8 pt-18 md:pt-6">
         {/* Score Circle */}
         <motion.div
           initial={{ scale: 0 }}
@@ -198,7 +198,7 @@ export default function ResultPage() {
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
           className="relative"
         >
-          <svg className="w-48 h-48 transform -rotate-90">
+          <svg className="h-48 w-48 -rotate-90 transform">
             {/* Background Circle */}
             <circle
               cx="96"
@@ -235,7 +235,7 @@ export default function ResultPage() {
               className="text-center"
             >
               <div
-                className="text-4xl md:text-5xl lg:text-6xl font-serif"
+                className="font-serif text-4xl md:text-5xl lg:text-6xl"
                 style={{ color: badge.color }}
               >
                 {score}%
@@ -249,13 +249,13 @@ export default function ResultPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="text-center space-y-4"
+          className="space-y-4 text-center"
         >
           <div className="text-5xl md:text-5xl">{badge.emoji}</div>
 
           <div>
             <h2
-              className="text-4xl font-serif mb-2"
+              className="mb-2 font-serif text-4xl"
               style={{ color: badge.color }}
             >
               {badge.title}
@@ -274,11 +274,11 @@ export default function ResultPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="bg-white rounded-3xl shadow-lg p-4 md:p-6 w-full"
+          className="w-full rounded-3xl bg-white p-4 shadow-lg md:p-6"
         >
           <div className="grid grid-cols-3 gap-4 text-center">
             <div className="space-y-1.5 md:space-y-2">
-              <div className="text-2xl font-serif text-[#FF6B6B]">
+              <div className="font-serif text-2xl text-[#FF6B6B]">
                 {Math.round((score / 100) * quiz.question_count)}
               </div>
 
@@ -288,7 +288,7 @@ export default function ResultPage() {
             </div>
 
             <div className="space-y-1.5 md:space-y-2">
-              <div className="text-2xl font-serif text-gray-400">
+              <div className="font-serif text-2xl text-gray-400">
                 {quiz.question_count -
                   Math.round((score / 100) * quiz.question_count)}
               </div>
@@ -297,7 +297,7 @@ export default function ResultPage() {
             </div>
 
             <div className="space-y-1.5 md:space-y-2">
-              <div className="text-2xl font-serif text-gray-900">
+              <div className="font-serif text-2xl text-gray-900">
                 {quiz.question_count}
               </div>
 
@@ -314,15 +314,15 @@ export default function ResultPage() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2 }}
-        className="w-full pt-6 space-y-3 pb-6"
+        className="w-full space-y-3 pt-6 pb-6"
       >
         <Button onClick={handleShare} fullWidth>
-          <Share2 className="w-5 h-5" />
+          <Share2 className="h-5 w-5" />
           {t("results.shareButton")}
         </Button>
 
         <Button onClick={onPlayAgain} variant="secondary" fullWidth>
-          <RotateCcw className="w-5 h-5" />
+          <RotateCcw className="h-5 w-5" />
           {t("results.playAgainButton")}
         </Button>
       </motion.div>
