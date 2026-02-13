@@ -15,6 +15,11 @@ const analyticsRoutes = require("./routes/analytics");
 
 const app = express();
 
+// ===== TRUST PROXY (Required for Render & reverse proxies) =====
+// Tells Express to trust X-Forwarded-* headers from the reverse proxy
+// This fixes: "X-Forwarded-For header is set but trust proxy is false"
+app.set("trust proxy", 1);
+
 // ===== SECURE HEADERS & HTTPS ENFORCEMENT =====
 app.use(
   helmet({
