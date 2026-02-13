@@ -1,0 +1,1448 @@
+[
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est mon deuxième prénom ?",
+    "options": [
+      { "text": "Je n'en ai pas", "index": 0 },
+      { "text": "Marie / Jean", "index": 1 },
+      { "text": "Le prénom d'un grand-parent", "index": 2 },
+      { "text": "Un prénom plus original", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my middle name?",
+    "options": [
+      { "text": "I don't have one", "index": 0 },
+      { "text": "Marie / John", "index": 1 },
+      { "text": "A grandparent's name", "index": 2 },
+      { "text": "A more unique name", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est ma couleur préférée ?",
+    "options": [
+      { "text": "Bleu", "index": 0 },
+      { "text": "Rouge", "index": 1 },
+      { "text": "Vert", "index": 2 },
+      { "text": "Noir", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite color?",
+    "options": [
+      { "text": "Blue", "index": 0 },
+      { "text": "Red", "index": 1 },
+      { "text": "Green", "index": 2 },
+      { "text": "Black", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je me souviens de la date exacte de notre premier baiser ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I remember the exact date of our first kiss?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Où avons-nous eu notre premier rendez-vous ?",
+    "options": [
+      { "text": "Au restaurant", "index": 0 },
+      { "text": "Au cinéma", "index": 1 },
+      { "text": "Dans un parc", "index": 2 },
+      { "text": "Chez l'un de nous", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "Where did we have our first date?",
+    "options": [
+      { "text": "At a restaurant", "index": 0 },
+      { "text": "At the movies", "index": 1 },
+      { "text": "In a park", "index": 2 },
+      { "text": "At one of our places", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est mon plat préféré quand je veux me faire plaisir ?",
+    "options": [
+      { "text": "Riz Sauce Arachide (ou Sauce Graine)", "index": 0 },
+      { "text": "Une Pizza", "index": 1 },
+      { "text": "Atassi", "index": 2 },
+      { "text": "Des Pâtes", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite comfort food?",
+    "options": [
+      { "text": "Rice with Peanut Sauce (or Palm Oil Sauce)", "index": 0 },
+      { "text": "Pizza", "index": 1 },
+      { "text": "Atassi", "index": 2 },
+      { "text": "Pasta", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je suis plutôt du matin ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Am I a morning person?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est ma plus grande peur ?",
+    "options": [
+      { "text": "Les araignées / insectes", "index": 0 },
+      { "text": "Le vide / les hauteurs", "index": 1 },
+      { "text": "La solitude", "index": 2 },
+      { "text": "L'échec", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my biggest fear?",
+    "options": [
+      { "text": "Spiders / insects", "index": 0 },
+      { "text": "Heights", "index": 1 },
+      { "text": "Solitude", "index": 2 },
+      { "text": "Failure", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Si je pouvais voyager n'importe où demain, j'irais...",
+    "options": [
+      { "text": "Sur une plage paradisiaque", "index": 0 },
+      { "text": "Dans une grande ville (New York, Tokyo)", "index": 1 },
+      { "text": "À la montagne", "index": 2 },
+      { "text": "En road-trip sauvage", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "If I could travel anywhere tomorrow, I would go to...",
+    "options": [
+      { "text": "A tropical beach", "index": 0 },
+      { "text": "A big city (NYC, Tokyo)", "index": 1 },
+      { "text": "The mountains", "index": 2 },
+      { "text": "A wild road trip", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je crois aux âmes sœurs ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I believe in soulmates?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est ma saison préférée ?",
+    "options": [
+      { "text": "Le printemps", "index": 0 },
+      { "text": "L'été", "index": 1 },
+      { "text": "L'automne", "index": 2 },
+      { "text": "L'hiver", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite season?",
+    "options": [
+      { "text": "Spring", "index": 0 },
+      { "text": "Summer", "index": 1 },
+      { "text": "Autumn", "index": 2 },
+      { "text": "Winter", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Lequel de ces défauts m'agace le plus chez les autres ?",
+    "options": [
+      { "text": "L'hypocrisie", "index": 0 },
+      { "text": "Le manque de ponctualité", "index": 1 },
+      { "text": "L'arrogance", "index": 2 },
+      { "text": "L'égoïsme", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "Which of these traits annoys me most in others?",
+    "options": [
+      { "text": "Hypocrisy", "index": 0 },
+      { "text": "Being late", "index": 1 },
+      { "text": "Arrogance", "index": 2 },
+      { "text": "Selfishness", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je chante sous la douche ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I sing in the shower?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est mon genre de film préféré ?",
+    "options": [
+      { "text": "Comédie romantique", "index": 0 },
+      { "text": "Action / Aventure", "index": 1 },
+      { "text": "Horreur / Thriller", "index": 2 },
+      { "text": "Documentaire / Drame", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite movie genre?",
+    "options": [
+      { "text": "Rom-com", "index": 0 },
+      { "text": "Action / Adventure", "index": 1 },
+      { "text": "Horror / Thriller", "index": 2 },
+      { "text": "Documentary / Drama", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est ma plus grande qualité selon moi ?",
+    "options": [
+      { "text": "Ma gentillesse", "index": 0 },
+      { "text": "Mon humour", "index": 1 },
+      { "text": "Mon intelligence", "index": 2 },
+      { "text": "Ma loyauté", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What do I consider my best quality?",
+    "options": [
+      { "text": "My kindness", "index": 0 },
+      { "text": "My sense of humor", "index": 1 },
+      { "text": "My intelligence", "index": 2 },
+      { "text": "My loyalty", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que j'aimerais avoir (plus d') enfants un jour ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I want to have (more) children one day?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est l'habitude qui m'agace le plus chez toi ?",
+    "options": [
+      { "text": "Laisser traîner tes affaires", "index": 0 },
+      { "text": "Être toujours sur ton téléphone", "index": 1 },
+      { "text": "Ne pas m'écouter", "index": 2 },
+      { "text": "Tes retards", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "Which of your habits annoys me the most?",
+    "options": [
+      { "text": "Leaving things lying around", "index": 0 },
+      { "text": "Always being on your phone", "index": 1 },
+      { "text": "Not listening to me", "index": 2 },
+      { "text": "Being late", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est mon souvenir préféré de nous deux ?",
+    "options": [
+      { "text": "Notre rencontre", "index": 0 },
+      { "text": "Nos premières vacances", "index": 1 },
+      { "text": "Un simple fou rire", "index": 2 },
+      { "text": "Notre premier 'Je t'aime'", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite memory of us?",
+    "options": [
+      { "text": "How we met", "index": 0 },
+      { "text": "Our first vacation", "index": 1 },
+      { "text": "A simple laughing fit", "index": 2 },
+      { "text": "Our first 'I love you'", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je suis quelqu'un de rancunier ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Am I someone who holds grudges?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est mon langage de l'amour principal ?",
+    "options": [
+      { "text": "Les paroles valorisantes", "index": 0 },
+      { "text": "Les moments de qualité", "index": 1 },
+      { "text": "Le toucher physique", "index": 2 },
+      { "text": "Les services rendus", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my primary love language?",
+    "options": [
+      { "text": "Words of affirmation", "index": 0 },
+      { "text": "Quality time", "index": 1 },
+      { "text": "Physical touch", "index": 2 },
+      { "text": "Acts of service", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle partie de ton corps est ma préférée ?",
+    "options": [
+      { "text": "Tes yeux", "index": 0 },
+      { "text": "Ton sourire", "index": 1 },
+      { "text": "Tes mains", "index": 2 },
+      { "text": "Ton dos / tes épaules", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite part of your body?",
+    "options": [
+      { "text": "Your eyes", "index": 0 },
+      { "text": "Your smile", "index": 1 },
+      { "text": "Your hands", "index": 2 },
+      { "text": "Your back / shoulders", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je serais prêt(e) à tout quitter pour vivre à l'étranger avec toi ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Would I be willing to leave everything to live abroad with you?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Qu'est-ce qui me fait craquer chez toi à tous les coups ?",
+    "options": [
+      { "text": "Ton regard", "index": 0 },
+      { "text": "Ton rire", "index": 1 },
+      { "text": "Ton odeur", "index": 2 },
+      { "text": "Ta façon de prendre soin de moi", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What makes me melt for you every single time?",
+    "options": [
+      { "text": "The way you look at me", "index": 0 },
+      { "text": "Your laugh", "index": 1 },
+      { "text": "Your scent", "index": 2 },
+      { "text": "How you take care of me", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Si je devais emporter un seul objet sur une île déserte, ce serait...",
+    "options": [
+      { "text": "Mon téléphone", "index": 0 },
+      { "text": "Un livre", "index": 1 },
+      { "text": "Une photo de nous", "index": 2 },
+      { "text": "Un couteau suisse", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "If I had to take only one object to a deserted island, it would be...",
+    "options": [
+      { "text": "My phone", "index": 0 },
+      { "text": "A book", "index": 1 },
+      { "text": "A photo of us", "index": 2 },
+      { "text": "A Swiss army knife", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je préfère les câlins aux baisers ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I prefer cuddles over kisses?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Comment est-ce que je gère le stress ?",
+    "options": [
+      { "text": "Je m'isole", "index": 0 },
+      { "text": "J'ai besoin d'en parler", "index": 1 },
+      { "text": "Je m'énerve vite", "index": 2 },
+      { "text": "Je mange beaucoup", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "How do I handle stress?",
+    "options": [
+      { "text": "I isolate myself", "index": 0 },
+      { "text": "I need to talk about it", "index": 1 },
+      { "text": "I get annoyed quickly", "index": 2 },
+      { "text": "I eat a lot", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Qu'est-ce qui me rend le plus fier / la plus fière de nous ?",
+    "options": [
+      { "text": "Notre communication", "index": 0 },
+      { "text": "Notre complicité", "index": 1 },
+      { "text": "Les obstacles surmontés", "index": 2 },
+      { "text": "Nos projets futurs", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What makes me most proud of us?",
+    "options": [
+      { "text": "Our communication", "index": 0 },
+      { "text": "Our bond", "index": 1 },
+      { "text": "The obstacles we've overcome", "index": 2 },
+      { "text": "Our future projects", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je serais jaloux/jalouse si tu partais en vacances avec ton ex ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Would I be jealous if you went on vacation with your ex?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est le voyage de mes rêves qu'on n'a pas encore fait ?",
+    "options": [
+      { "text": "Un safari en Afrique", "index": 0 },
+      { "text": "Aurores boréales en Islande", "index": 1 },
+      { "text": "Le tour du Japon", "index": 2 },
+      { "text": "La Polynésie française", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my dream trip that we haven't taken yet?",
+    "options": [
+      { "text": "An African safari", "index": 0 },
+      { "text": "Northern Lights in Iceland", "index": 1 },
+      { "text": "Exploring Japan", "index": 2 },
+      { "text": "French Polynesia", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Comment décrirais-tu ma personnalité en un mot ?",
+    "options": [
+      { "text": "Passionné(e)", "index": 0 },
+      { "text": "Calme", "index": 1 },
+      { "text": "Ambitieux/se", "index": 2 },
+      { "text": "Rêveur/se", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "How would I describe my personality in one word?",
+    "options": [
+      { "text": "Passionate", "index": 0 },
+      { "text": "Calm", "index": 1 },
+      { "text": "Ambitious", "index": 2 },
+      { "text": "Dreamer", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je pense que nous finirons nos jours ensemble ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I think we will grow old together?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Si je gagnais au loto, quelle est la première chose que j'achèterais ?",
+    "options": [
+      { "text": "Une grande maison", "index": 0 },
+      { "text": "Une voiture de sport", "index": 1 },
+      { "text": "Des billets d'avion", "index": 2 },
+      { "text": "Des cadeaux pour mes proches", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "If I won the lottery, what is the first thing I would buy?",
+    "options": [
+      { "text": "A big house", "index": 0 },
+      { "text": "A sports car", "index": 1 },
+      { "text": "Plane tickets", "index": 2 },
+      { "text": "Gifts for my family", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle a été ma première impression de toi lors de notre rencontre ?",
+    "options": [
+      { "text": "Coup de foudre immédiat", "index": 0 },
+      { "text": "Pas du tout mon style", "index": 1 },
+      { "text": "Intimidant(e) mais attirant(e)", "index": 2 },
+      { "text": "Trop bavard(e) / Trop timide", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What was my very first impression of you when we met?",
+    "options": [
+      { "text": "Instant love at first sight", "index": 0 },
+      { "text": "Not my type at all", "index": 1 },
+      { "text": "Intimidating but attractive", "index": 2 },
+      { "text": "Too talkative / Too shy", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que j'ai déjà simulé d'être endormi(e) pour éviter une discussion ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever faked being asleep to avoid a conversation?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est la chose la plus folle que j'aimerais tester avec toi ?",
+    "options": [
+      { "text": "Un saut en parachute", "index": 0 },
+      { "text": "Un voyage sans destination précise", "index": 1 },
+      { "text": "Une expérience libertine", "index": 2 },
+      { "text": "Vivre dans une tiny house", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is the craziest thing I'd like to try with you?",
+    "options": [
+      { "text": "Skydiving", "index": 0 },
+      { "text": "A trip with no destination", "index": 1 },
+      { "text": "A lifestyle experiment", "index": 2 },
+      { "text": "Living in a tiny house", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je regarde parfois tes messages quand tu as le dos tourné ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I ever peek at your messages when your back is turned?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est mon plus grand 'tue-l'amour' ?",
+    "options": [
+      { "text": "La mauvaise haleine", "index": 0 },
+      { "text": "Le manque d'hygiène", "index": 1 },
+      { "text": "L'arrogance envers les serveurs", "index": 2 },
+      { "text": "Les chaussettes dans les sandales", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my biggest turn-off?",
+    "options": [
+      { "text": "Bad breath", "index": 0 },
+      { "text": "Poor hygiene", "index": 1 },
+      { "text": "Rudeness to waitstaff", "index": 2 },
+      { "text": "Socks with sandals", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je serais capable de te pardonner une infidélité ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Would I be able to forgive an infidelity?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Si on changeait de corps pendant 24h, que ferais-je en premier ?",
+    "options": [
+      { "text": "Me regarder nu(e) dans le miroir", "index": 0 },
+      { "text": "Appeler tes parents pour faire une blague", "index": 1 },
+      { "text": "Manger tout ce que tu t'interdis", "index": 2 },
+      { "text": "Essayer tous tes vêtements", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "If we swapped bodies for 24h, what would I do first?",
+    "options": [
+      { "text": "Look at myself naked in the mirror", "index": 0 },
+      { "text": "Call your parents to prank them", "index": 1 },
+      { "text": "Eat everything you forbid yourself", "index": 2 },
+      { "text": "Try on all your clothes", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que j'ai déjà eu un fantasme sur l'un(e) de tes ami(e)s ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever had a crush or fantasy about one of your friends?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Où est l'endroit le plus insolite où j'aimerais 'le faire' ?",
+    "options": [
+      { "text": "Dans un avion", "index": 0 },
+      { "text": "Dans une forêt", "index": 1 },
+      { "text": "À la plage", "index": 2 },
+      { "text": "Dans un ascenseur", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is the most unusual place I'd like to 'do it'?",
+    "options": [
+      { "text": "On a plane", "index": 0 },
+      { "text": "In a forest", "index": 1 },
+      { "text": "On a beach", "index": 2 },
+      { "text": "In an elevator", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Laquelle de tes ex me rend le plus insécure ou jaloux(se) ?",
+    "options": [
+      { "text": "Ton premier amour", "index": 0 },
+      { "text": "La dernière avant moi", "index": 1 },
+      { "text": "Celle ou celui qui est resté(e) ami(e) avec toi", "index": 2 },
+      { "text": "Aucune, je me sens en confiance", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "Which of your exes makes me the most insecure or jealous?",
+    "options": [
+      { "text": "Your first love", "index": 0 },
+      { "text": "The last one before me", "index": 1 },
+      { "text": "The one who stayed friends with you", "index": 2 },
+      { "text": "None, I feel confident", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je trouve que nous faisons l'amour assez souvent ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I think we have sex often enough?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Qu'est-ce que je préfère faire après l'amour ?",
+    "options": [
+      { "text": "Un gros câlin", "index": 0 },
+      { "text": "Dormir immédiatement", "index": 1 },
+      { "text": "Discuter pendant des heures", "index": 2 },
+      { "text": "Manger un snack", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite thing to do after sex?",
+    "options": [
+      { "text": "Cuddle up", "index": 0 },
+      { "text": "Sleep immediately", "index": 1 },
+      { "text": "Talk for hours", "index": 2 },
+      { "text": "Eat a snack", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est la partie de mon corps dont je suis le plus complexé(e) ?",
+    "options": [
+      { "text": "Mon ventre", "index": 0 },
+      { "text": "Mes jambes / pieds", "index": 1 },
+      { "text": "Mon nez", "index": 2 },
+      { "text": "Ma peau", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What part of my body am I most self-conscious about?",
+    "options": [
+      { "text": "My belly", "index": 0 },
+      { "text": "My legs / feet", "index": 1 },
+      { "text": "My nose", "index": 2 },
+      { "text": "My skin", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je pourrais te laisser mon code de téléphone sans stress ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Could I give you my phone passcode without any stress?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est la chose la plus romantique que j'ai faite pour toi ?",
+    "options": [
+      { "text": "Un dîner surprise", "index": 0 },
+      { "text": "Une lettre écrite à la main", "index": 1 },
+      { "text": "Un voyage improvisé", "index": 2 },
+      { "text": "Te soutenir dans un moment dur", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is the most romantic thing I've ever done for you?",
+    "options": [
+      { "text": "A surprise dinner", "index": 0 },
+      { "text": "A handwritten letter", "index": 1 },
+      { "text": "An unplanned trip", "index": 2 },
+      { "text": "Supporting you during a hard time", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je t'ai déjà menti sur un truc 'grave' ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever lied to you about something 'serious'?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est mon plus grand fantasme inavoué ?",
+    "options": [
+      { "text": "Le faire en public", "index": 0 },
+      { "text": "Un jeu de rôle (cosplay)", "index": 1 },
+      { "text": "Être dominé(e)", "index": 2 },
+      { "text": "Filmer nos ébats", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my biggest unspoken fantasy?",
+    "options": [
+      { "text": "Doing it in public", "index": 0 },
+      { "text": "Roleplay / Cosplay", "index": 1 },
+      { "text": "Being dominated", "index": 2 },
+      { "text": "Filming our intimacy", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je serais prêt(e) à faire un plan à trois avec toi ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Would I be open to a threesome with you?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est la chose que je préfère chez toi au lit ?",
+    "options": [
+      { "text": "Ton endurance", "index": 0 },
+      { "text": "Ton enthousiasme", "index": 1 },
+      { "text": "Ta douceur", "index": 2 },
+      { "text": "Ta créativité", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is my favorite thing about you in bed?",
+    "options": [
+      { "text": "Your stamina", "index": 0 },
+      { "text": "Your enthusiasm", "index": 1 },
+      { "text": "Your gentleness", "index": 2 },
+      { "text": "Your creativity", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je pense que l'on communique assez sur nos envies sexuelles ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I think we communicate enough about our sexual desires?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est la première chose que j'ai remarquée chez toi ?",
+    "options": [
+      { "text": "Ton regard / tes yeux", "index": 0 },
+      { "text": "Ton style vestimentaire", "index": 1 },
+      { "text": "Ton rire ou ton énergie", "index": 2 },
+      { "text": "Ta façon de parler", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What was the very first thing I noticed about you?",
+    "options": [
+      { "text": "Your eyes / gaze", "index": 0 },
+      { "text": "Your style / outfit", "index": 1 },
+      { "text": "Your laugh or energy", "index": 2 },
+      { "text": "The way you speak", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que j'ai déjà souri bêtement devant mon téléphone en lisant un de tes messages ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever smiled like a fool at my phone while reading one of your texts?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Si on devait passer une soirée entière juste tous les deux, je choisirais...",
+    "options": [
+      { "text": "Un verre en terrasse tamisée", "index": 0 },
+      { "text": "Une balade nocturne à discuter", "index": 1 },
+      { "text": "Cuisiner un truc ensemble", "index": 2 },
+      { "text": "Un endroit animé avec de la musique", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "If we had to spend an entire evening just the two of us, I would choose...",
+    "options": [
+      { "text": "Drinks on a cozy terrace", "index": 0 },
+      { "text": "A night walk just talking", "index": 1 },
+      { "text": "Cooking something together", "index": 2 },
+      { "text": "Somewhere lively with music", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je me suis déjà demandé ce que mes amis penseraient de toi ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever wondered what my friends would think of you?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Qu'est-ce qui m'intimide le plus chez toi ?",
+    "options": [
+      { "text": "Ton assurance", "index": 0 },
+      { "text": "Ton intelligence", "index": 1 },
+      { "text": "Ton charme naturel", "index": 2 },
+      { "text": "Le fait que tu lises en moi", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What intimidates me the most about you?",
+    "options": [
+      { "text": "Your confidence", "index": 0 },
+      { "text": "Your intelligence", "index": 1 },
+      { "text": "Your natural charm", "index": 2 },
+      { "text": "The way you can read me", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que j'ai déjà analysé un de tes silences avec un peu d'anxiété ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever over-analyzed one of your silences with a bit of anxiety?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Comment est-ce que je montre généralement que quelqu'un me plaît ?",
+    "options": [
+      { "text": "Je taquine beaucoup", "index": 0 },
+      { "text": "Je deviens très attentionné(e)", "index": 1 },
+      { "text": "Je pose mille questions", "index": 2 },
+      { "text": "Je reste discret(e) mais présent(e)", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "How do I usually show that I'm interested in someone?",
+    "options": [
+      { "text": "I tease them a lot", "index": 0 },
+      { "text": "I become very caring", "index": 1 },
+      { "text": "I ask a thousand questions", "index": 2 },
+      { "text": "I stay subtle but present", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce qu'il y a une chanson qui me fait systématiquement penser à toi ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Is there a specific song that automatically makes me think of you?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Laquelle de ces choses me ferait le plus craquer ?",
+    "options": [
+      { "text": "Que tu me défendes", "index": 0 },
+      { "text": "Que tu te confies à moi", "index": 1 },
+      { "text": "Que tu me fasses rire aux larmes", "index": 2 },
+      { "text": "Un contact physique inattendu", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "Which of these things would make me melt the most?",
+    "options": [
+      { "text": "You standing up for me", "index": 0 },
+      { "text": "You opening up to me", "index": 1 },
+      { "text": "You making me laugh until I cry", "index": 2 },
+      { "text": "An unexpected physical touch", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que j'ai déjà ressenti une petite pointe de jalousie en te voyant avec quelqu'un d'autre ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever felt a tiny spark of jealousy seeing you with someone else?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Si on devait partir en escapade improvisée demain, quel genre d'endroit choisirais-je ?",
+    "options": [
+      { "text": "Un chalet isolé", "index": 0 },
+      { "text": "Une ville inconnue à explorer", "index": 1 },
+      { "text": "Un bord de mer sauvage", "index": 2 },
+      { "text": "Un festival ou un événement", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "If we went on a spontaneous getaway tomorrow, what kind of place would I pick?",
+    "options": [
+      { "text": "A secluded cabin", "index": 0 },
+      { "text": "An unknown city to explore", "index": 1 },
+      { "text": "A wild coastline", "index": 2 },
+      { "text": "A festival or big event", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je pense qu'il y a une vraie connexion entre nous ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I honestly think there is a real connection between us?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel est le trait de ma personnalité qui semble le plus mystérieux pour toi ?",
+    "options": [
+      { "text": "Ma façon de gérer mes émotions", "index": 0 },
+      { "text": "Mes ambitions secrètes", "index": 1 },
+      { "text": "Mon passé", "index": 2 },
+      { "text": "Ce que je pense vraiment de toi", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What part of my personality seems the most mysterious to you?",
+    "options": [
+      { "text": "The way I handle my emotions", "index": 0 },
+      { "text": "My secret ambitions", "index": 1 },
+      { "text": "My past", "index": 2 },
+      { "text": "What I truly think about you", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que j'ai déjà relu nos anciennes conversations juste pour le plaisir ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever re-read our old conversations just for fun?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Si on devait se donner un défi idiot à faire ensemble, ce serait quoi ?",
+    "options": [
+      { "text": "Un concours de cuisine ratée", "index": 0 },
+      { "text": "Parler à des inconnus avec un accent", "index": 1 },
+      { "text": "Un karaoké sur des chansons ringardes", "index": 2 },
+      { "text": "Une journée sans aucun écran", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "If we had to do a silly challenge together, what would it be?",
+    "options": [
+      { "text": "A terrible cooking contest", "index": 0 },
+      { "text": "Talking to strangers with an accent", "index": 1 },
+      { "text": "Karaoke to cheesy songs", "index": 2 },
+      { "text": "A full day with no screens", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je me sens plus moi-même quand je suis avec toi ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Do I feel more like myself when I'm around you?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quelle est la chose 'non-physique' qui m'attire le plus chez toi ?",
+    "options": [
+      { "text": "Ta répartie", "index": 0 },
+      { "text": "Ta bienveillance", "index": 1 },
+      { "text": "Ta passion pour tes projets", "index": 2 },
+      { "text": "Ta voix", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What is the most attractive 'non-physical' thing about you?",
+    "options": [
+      { "text": "Your quick wit", "index": 0 },
+      { "text": "Your kindness", "index": 1 },
+      { "text": "Your passion for your projects", "index": 2 },
+      { "text": "Your voice", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je t'ai déjà cherché(e) du regard dans une pièce bondée ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Have I ever looked for you in a crowded room?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "fr",
+    "question_text": "Quel genre de compliment me touche le plus venant de toi ?",
+    "options": [
+      { "text": "Sur mon apparence", "index": 0 },
+      { "text": "Sur ma personnalité", "index": 1 },
+      { "text": "Sur ce que je t'apporte", "index": 2 },
+      { "text": "Sur mon intelligence", "index": 3 }
+    ]
+  },
+  {
+    "type": "multiple",
+    "language": "en",
+    "question_text": "What kind of compliment touches me most coming from you?",
+    "options": [
+      { "text": "About my looks", "index": 0 },
+      { "text": "About my personality", "index": 1 },
+      { "text": "About how I make you feel", "index": 2 },
+      { "text": "About my intelligence", "index": 3 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "fr",
+    "question_text": "Est-ce que je serais prêt(e) à te confier mon plus grand secret ?",
+    "options": [
+      { "text": "Oui", "index": 0 },
+      { "text": "Non", "index": 1 }
+    ]
+  },
+  {
+    "type": "yesno",
+    "language": "en",
+    "question_text": "Would I be ready to tell you my biggest secret?",
+    "options": [
+      { "text": "Yes", "index": 0 },
+      { "text": "No", "index": 1 }
+    ]
+  }
+]

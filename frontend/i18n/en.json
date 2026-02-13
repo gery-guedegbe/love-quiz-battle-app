@@ -1,0 +1,292 @@
+{
+  "global": {
+    "loading": "Loading questions...",
+    "goBack": "Go Back"
+  },
+  "landing": {
+    "title": "Do you really",
+    "titleHighlight": "know me?",
+    "subtitle": "Create a personalized quiz and challenge your partner to prove their love",
+    "namePlaceholder": "Enter your first name",
+    "nameLabel": "Your name",
+    "createButton": "Create my Quiz",
+    "footer": "Free • Takes 2 minutes • Share with anyone",
+    "nameError": "Please enter your name"
+  },
+  "setup": {
+    "stepOf": "Step",
+    "step1Title": "Who's taking",
+    "step1TitleBreak": "your quiz?",
+    "step1Subtitle": "Enter your partner's name",
+    "step1Placeholder": "Their first name",
+    "step1Label": "Partner's name",
+    "step1Error": "Please enter your partner's name",
+    "step2Title": "How many",
+    "step2TitleBreak": "questions?",
+    "step2Subtitle": "Pick your quiz length",
+    "step2Option1": "8 Questions",
+    "step2Option1Desc": "Quick & Sweet • ~3 minutes",
+    "step2Option2": "15 Questions",
+    "step2Option2Desc": "Standard • ~5 minutes",
+    "step2Option3": "20 Questions",
+    "step2Option3Desc": "Deep Dive • ~8 minutes",
+    "continueButton": "Continue",
+    "startButton": "Start Creating",
+    "languageTitle": "Choose your",
+    "languageTitleBreak": "language",
+    "languageSubtitle": "Select the quiz language",
+    "languageError": "Please select a language",
+    "languageIsEnglish": "English",
+    "languageIsFrench": "French"
+  },
+  "creation": {
+    "headerTitle": "Create Quiz for",
+    "questionOf": "Question",
+    "questionLabel": "Question",
+    "questionPlaceholder": "Enter your question...",
+    "optionsLabel": "Answer Options",
+    "optionPlaceholder": "Option",
+    "selectCorrect": "Select the correct answer",
+    "typeMultiple": "Multiple Choice",
+    "typeYesNo": "Yes/No",
+    "spiceTitle": "Add your own spice",
+    "spiceSubtitle": "Create {count} personal questions only you two would know",
+    "customTitle": "Custom Question #",
+    "customSubtitle": "Tap to add your own personal question",
+    "customBadge": "Your Spice",
+    "nextButton": "Next Question",
+    "skipButton": "Skip",
+    "finishButton": "Finish Quiz",
+    "startPlayingButton": "Start Playing",
+    "skipNote": "You can skip custom questions if you prefer",
+    "errorQuestion": "Question is required",
+    "errorOptions": "All options must be filled"
+  },
+  "play": {
+    "expired": "This quiz has expired 💔",
+    "alreadyCompleted": "This quiz has already been completed.",
+    "notFound": "Quiz not found.",
+    "feedbackCorrect": "Correct! 💚",
+    "feedbackIncorrect": "Oops! Not quite 😅",
+    "title": "How well do you know"
+  },
+  "common": {
+    "loading": "Loading..."
+  },
+  "results": {
+    "conversation": {
+      "title": "Keep the Spark Alive",
+      "subtitle": "Conversation starters for you two",
+      "footer": "Tap anywhere to close or create a new quiz",
+      "create": "Create New Quiz",
+
+      "high": [
+        "You two are basically telepathic! 🔮",
+        "What's your secret to knowing each other so well?",
+        "Time to level up: what's something new you want to learn about each other?"
+      ],
+
+      "good": [
+        "Pretty impressive connection! ✨",
+        "Which answer surprised you the most?",
+        "What would you like to know better about each other?"
+      ],
+
+      "medium": [
+        "You're on the right track! 🌟",
+        "Which questions revealed something new?",
+        "Time for a deeper conversation—what should you talk about?"
+      ],
+      "low": [
+        "Looks like there's more to discover! 🌱",
+        "This is your chance to learn something new.",
+        "What surprised you the most about these answers?"
+      ]
+    },
+    "soulmates": "Soulmates",
+    "bestFriends": "Best Friends",
+    "gettingThere": "Getting There",
+    "roomToGrow": "Room to Grow",
+    "strangerThings": "Stranger Things",
+    "knowsWell": "{partner} knows {creator} pretty well!",
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "total": "Total",
+    "shareButton": "Share Results",
+    "playAgainButton": "Create New Quiz",
+    "shareText": "I scored {score}% on {name}'s Love Quiz! 🎯 Can you beat my score?",
+    "linkCopied": "Link copied to clipboard!",
+    "intro": {
+      "titleLine1": "The Moment",
+      "titleLine2": "of Truth",
+      "completedOn": "Completed on",
+      "loveStory": "Your Love Story",
+      "tapToContinue": "Tap to continue"
+    },
+    "breakdown": {
+      "title": "Question by Question",
+      "matches": "Matches",
+      "misses": "Misses",
+      "perfect": "Perfect match! ✨",
+      "theyAnswered": "They answered:",
+      "correctAnswer": "Correct answer:",
+      "custom": "Custom",
+      "noAnswer": "No answer"
+    },
+    "dataSummary": {
+      "title": "The Results",
+      "subtitle": "How well did {partner} know {creator}?",
+      "matchScore": "Match Score",
+      "questions": "Questions",
+      "correct": "Correct",
+      "total": "Total"
+    }
+  },
+  "quizReady": {
+    "titlePart1": "Quiz",
+    "titlePart2": "Ready!",
+    "subtitle": "Your quiz for {partnerName} is ready to share",
+    "quizBy": "Quiz by",
+    "questions": "Questions",
+    "shareableLink": "Shareable Link",
+    "shareButton": "Share Quiz with {partnerName}",
+    "dashboardButton": "View Dashboard",
+    "loading": "Loading...",
+    "notFound": "Quiz not found.",
+    "copySuccess": "Copied!",
+    "shareText": "Hey {partnerName}! Think you know me? Take this quiz and prove it! 💕"
+  },
+  "dashboard": {
+    "title": "Quiz Dashboard",
+    "subtitle": "Track how well {partnerName} knows you",
+    "createdBy": "Created by",
+    "for": "For",
+    "questions": "Questions",
+    "multipleChoice": "Multiple Choice",
+    "yesNo": "Yes/No",
+    "quizCompleted": "Quiz Completed!",
+    "finalScore": "Final Score",
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "total": "Total",
+    "waiting": "Waiting for {partnerName}",
+    "notCompleted": "Quiz not completed yet",
+    "shareableLink": "Shareable Link",
+    "customQuestions": "Custom Questions",
+    "created": "Created",
+    "shareQuizLink": "Share Quiz Link",
+    "createNewQuiz": "Create New Quiz"
+  },
+  "badges": {
+    "soulmates": "Soulmates",
+    "bestFriends": "Best Friends",
+    "gettingThere": "Getting There",
+    "roomToGrow": "Room to Grow",
+    "strangerThings": "Stranger Things"
+  },
+  "errors": {
+    "missingQuizId": "Missing quiz ID",
+    "quizNotFound": "Quiz not found",
+    "fetchFailed": "Failed to load quiz"
+  },
+  "recap": {
+    "button": "Our Recap",
+    "cta": {
+      "title": "View Full Recap",
+      "subtitle": "See your story together"
+    }
+  },
+  "history": {
+    "button": "History",
+    "title": "Quiz History",
+    "subtitle": "Your love story archive",
+    "noMemories": "No memories yet",
+    "startFirstQuiz": "Start your first love quiz and build your story together",
+    "createNew": "Create New Quiz",
+    "completed": "Completed",
+    "waitingFor": "Waiting for {partner}",
+    "questions": "{count} Q"
+  },
+  "quizWrapped": {
+    "expired": "This quiz has expired (48h limit).",
+    "notAvailable": "Quiz not available.",
+    "waitingForPartner": "Recap will be available once the partner completes the quiz."
+  },
+  "admin": {
+    "title": "Admin Insights",
+    "subtitle": "Love Quiz Battle Analytics",
+    "recalculate": "Recalculate Stats",
+    "refreshing": "Refreshing...",
+    "kpi": {
+      "totalQuizzes": "Total Quizzes",
+      "questionsGenerated": "Questions Generated",
+      "completedQuizzes": "Completed Quizzes",
+      "avgScore": "Avg. Score"
+    },
+    "charts": {
+      "growth": "Quiz Creation Activity",
+      "distribution": "Score Distribution",
+      "distributionSubtitle": "Compatibility brackets",
+      "7days": "7 Days",
+      "30days": "30 Days",
+      "allTime": "All Time"
+    },
+    "recent": {
+      "title": "Recent Quiz Activity",
+      "subtitle": "Latest {count} quizzes",
+      "noData": "No quiz data available",
+      "creator": "Creator",
+      "partner": "Partner",
+      "questions": "Questions",
+      "status": "Status",
+      "score": "Score",
+      "created": "Created",
+      "action": "Action",
+      "view": "View",
+      "viewDetails": "View Details",
+      "completed": "Completed",
+      "pending": "Pending"
+    },
+    "snapshots": {
+      "title": "Analytics Snapshots",
+      "generate": "Generate Snapshot",
+      "generating": "Generating...",
+      "lastCalculated": "Last calculated",
+      "created": "Created"
+    },
+    "dashboard": {
+      "title": "Quiz Dashboard",
+      "subtitle": "Track how well {partnerName} knows you",
+      "createdBy": "Created by",
+      "for": "For",
+      "questions": "Questions",
+      "multipleChoice": "Multiple Choice",
+      "yesNo": "Yes/No",
+      "quizCompleted": "Quiz Completed!",
+      "finalScore": "Final Score",
+      "correct": "Correct",
+      "wrong": "Wrong",
+      "total": "Total",
+      "waiting": "Waiting for {partnerName}",
+      "notCompleted": "Quiz not completed yet",
+      "shareableLink": "Shareable Link",
+      "customQuestions": "Custom Questions",
+      "created": "Created",
+      "shareQuizLink": "Share Quiz Link",
+      "createNewQuiz": "Create New Quiz",
+      "at": "at"
+    },
+    "badges": {
+      "soulmates": "Soulmates",
+      "bestFriends": "Best Friends",
+      "gettingThere": "Getting There",
+      "roomToGrow": "Room to Grow",
+      "strangerThings": "Stranger Things"
+    },
+    "errors": {
+      "fetchFailed": "Failed to load analytics data",
+      "generateFailed": "Failed to generate snapshot",
+      "unauthorized": "Unauthorized access"
+    }
+  }
+}
