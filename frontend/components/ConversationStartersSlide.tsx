@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { MessageCircle, Heart, Lightbulb } from "lucide-react";
 import { Quiz } from "@/types/types";
 import { useLanguage } from "@/context/LanguageContext";
+import { useRouter } from "next/navigation";
 
 interface ConversationStartersSlideProps {
   quiz: Quiz;
@@ -11,6 +12,7 @@ export function ConversationStartersSlide({
   quiz,
 }: ConversationStartersSlideProps) {
   const { t } = useLanguage();
+  const router = useRouter();
 
   // Sécurité : quiz non complété
   if (!quiz.partner_completed) return null;
@@ -48,7 +50,7 @@ export function ConversationStartersSlide({
   const starters = getConversationStarters(score);
 
   return (
-    <div className="to-primary/10 flex h-full flex-col items-center justify-center bg-linear-to-br from-[#FFD700]/10 via-white px-4 pt-12 pb-6 md:px-8 md:pt-12 md:pb-0">
+    <div className="to-primary/10 flex h-full flex-col items-center justify-center bg-linear-to-br from-[#FFD700]/10 via-white px-4 pt-12 pb-6 md:px-8 md:pt-12">
       <div className="w-full max-w-sm space-y-8">
         {/* Title */}
         <motion.div
@@ -121,7 +123,7 @@ export function ConversationStartersSlide({
           </div>
 
           <motion.button
-            onClick={() => {}}
+            onClick={() => router.push("/")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="rounded-full bg-linear-to-r from-[#FF6B6B] to-[#FF8B94] px-6 py-3 font-semibold text-white shadow-lg"
