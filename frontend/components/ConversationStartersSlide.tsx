@@ -48,7 +48,7 @@ export function ConversationStartersSlide({
   const starters = getConversationStarters(score);
 
   return (
-    <div className="to-primary/10 flex h-full flex-col items-center justify-center bg-linear-to-br from-[#FFD700]/10 via-white px-4 pt-12 md:px-8 md:pt-12">
+    <div className="to-primary/10 flex h-full flex-col items-center justify-center bg-linear-to-br from-[#FFD700]/10 via-white px-4 pt-12 pb-6 md:px-8 md:pt-12 md:pb-0">
       <div className="w-full max-w-sm space-y-8">
         {/* Title */}
         <motion.div
