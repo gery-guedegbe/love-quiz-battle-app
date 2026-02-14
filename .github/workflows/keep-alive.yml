@@ -1,47 +1,51 @@
-name: Keep Render Backend Alive
+name: Keep Server Alive
 
 on:
-    schedule:
-        # Every 13 minutes (cron runs every ~5 minutes minimum on free tier)
-        # This will execute ~4-5 times per hour
-        - cron: "*/13 * * * *"
-    workflow_dispatch: # Allow manual execution for testing
+  # Exécution automatique toutes les 12 minutes
+  schedule:
+    # Format: minute heure jour mois jour-semaine
+    # Toutes les 12 minutes: */12 * * * *
+    # Pour tester, vous pouvez utiliser: */5 * * * * (toutes les 5 minutes)
+    - cron: "*/12 * * * *"
+
+  # Permet aussi de déclencher manuellement depuis GitHub
+  workflow_dispatch:
 
 jobs:
-    keep-alive:
-        runs-on: ubuntu-latest
-        name: Ping API Health
+  ping-server:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
 
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
+    steps:
+      - name: Ping Server Health Endpoint
+        env:
+          # Récupère l'URL du serveur depuis les secrets GitHub
+          # Configurez ce secret dans: Settings > Secrets and variables > Actions
+          SERVER_URL: ${{ secrets.BACKEND_URL }}
+        run: |
+          if [ -z "$BACKEND_URL" ]; then
+            echo "❌ ERREUR: BACKEND_URL n'est pas défini!"
+            echo "📝 Configurez le secret BACKEND_URL dans:"
+            echo "   Settings > Secrets and variables > Actions > New repository secret"
+            echo "   Nom: BACKEND_URL"
+            echo "   Valeur: https://votre-app.onrender.com"
+            exit 1
+          fi
 
-            - name: Ping backend health endpoint
-              run: |
-                  BACKEND_URL="${{ secrets.BACKEND_URL }}"
+          echo "🏥 Pinging server health endpoint: $BACKEND_URL/api/health"
 
-                  echo "🔔 Sending keep-alive ping to backend..."
+          # Fait une requête GET vers l'endpoint health
+          response=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$BACKEND_URL/api/health" || echo "000")
 
-                  # Send request with timeout and verbose output
-                  curl -i \
-                    --max-time 10 \
-                    --retry 2 \
-                    --retry-delay 2 \
-                    --retry-max-time 15 \
-                    "${BACKEND_URL}/api/health"
-                    
-                  # Capture exit code
-                  EXIT_CODE=$?
-
-                  if [ $EXIT_CODE -eq 0 ]; then
-                    echo "✅ Keep-alive ping successful"
-                    exit 0
-                  else
-                    echo "❌ Keep-alive ping failed with exit code: $EXIT_CODE"
-                    exit 1
-                  fi
-
-            - name: Log timestamp
-              if: always()
-              run: |
-                  echo "⏱️ Ping executed at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          if [ "$response" = "200" ]; then
+            echo "✅ Server is alive! (HTTP $response)"
+            echo "⏰ Timestamp: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            exit 0
+          else
+            echo "❌ Server health check failed! (HTTP $response)"
+            echo "⚠️  This might mean the server is sleeping or there's an issue."
+            echo "⏰ Timestamp: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+            # On ne fait pas échouer le workflow pour éviter les notifications inutiles
+            # Le serveur se réveillera au prochain ping
+            exit 0
+          fi
